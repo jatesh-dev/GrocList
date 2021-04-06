@@ -490,8 +490,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1397DBB725E37B1800ACC628 /* Build configuration list for PBXNativeTarget "GrocList" */;
 			buildPhases = (
-				026D5BCE25FB38E200C53162 /* ShellScript */,
 				4BFDE8D5166EA853056BA592 /* [CP] Check Pods Manifest.lock */,
+				026D5BCE25FB38E200C53162 /* ShellScript */,
 				1397DB9F25E37B1600ACC628 /* Sources */,
 				1397DBA025E37B1600ACC628 /* Frameworks */,
 				1397DBA125E37B1600ACC628 /* Resources */,
