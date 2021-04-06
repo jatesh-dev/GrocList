@@ -1,0 +1,892 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0218D5C626159A1F002EC714 /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5C226159A1F002EC714 /* AddFriendsViewController.swift */; };
+		0218D5C726159A1F002EC714 /* AddFriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5C326159A1F002EC714 /* AddFriendsPresenter.swift */; };
+		0218D5C826159A1F002EC714 /* AddFriendsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5C426159A1F002EC714 /* AddFriendsProtocols.swift */; };
+		0218D5C926159A1F002EC714 /* AddFriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5C526159A1F002EC714 /* AddFriendsInteractor.swift */; };
+		0218D5D526159AC6002EC714 /* RequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0218D5D326159AC6002EC714 /* RequestCell.xib */; };
+		0218D5D626159AC6002EC714 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5D426159AC6002EC714 /* RequestCell.swift */; };
+		0218D5DE26159B14002EC714 /* AddFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5DC26159B14002EC714 /* AddFriendCell.swift */; };
+		0218D5DF26159B14002EC714 /* AddFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0218D5DD26159B14002EC714 /* AddFriendCell.xib */; };
+		0218D5E52615B205002EC714 /* FriendsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5E42615B205002EC714 /* FriendsTabBarController.swift */; };
+		0218D5E82615B2E8002EC714 /* FriendsTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218D5E72615B2E8002EC714 /* FriendsTabBarRouter.swift */; };
+		0220F0D52612E78200402367 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0D42612E78200402367 /* MainInteractor.swift */; };
+		0220F0D82612E79500402367 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0D72612E79500402367 /* MainPresenter.swift */; };
+		0220F0DE2612E7B500402367 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0DD2612E7B500402367 /* MainRouter.swift */; };
+		0220F0E22612E83B00402367 /* MainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0E12612E83B00402367 /* MainProtocols.swift */; };
+		0220F0E826131C3800402367 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0E726131C3800402367 /* LoginRouter.swift */; };
+		0220F0EB26131C5B00402367 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0EA26131C5B00402367 /* LoginProtocol.swift */; };
+		0220F0EE26131D0300402367 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0ED26131D0300402367 /* LoginPresenter.swift */; };
+		0220F0F126131D0F00402367 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0F026131D0F00402367 /* LoginInteractor.swift */; };
+		0220F0F7261338E400402367 /* SignupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0F6261338E400402367 /* SignupRouter.swift */; };
+		0220F0FA261338EF00402367 /* SignupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0F9261338EF00402367 /* SignupProtocol.swift */; };
+		0220F0FD261338FD00402367 /* SignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0FC261338FD00402367 /* SignupPresenter.swift */; };
+		0220F1002613390900402367 /* SignupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F0FF2613390900402367 /* SignupInteractor.swift */; };
+		0220F10726134C2E00402367 /* GrocViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F10626134C2E00402367 /* GrocViewProtocols.swift */; };
+		0220F10B26134C3F00402367 /* GrocViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F10A26134C3F00402367 /* GrocViewInteractor.swift */; };
+		0220F10E26134C4B00402367 /* GrocViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F10D26134C4B00402367 /* GrocViewPresenter.swift */; };
+		0220F11126134C5600402367 /* GrocViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F11026134C5600402367 /* GrocViewRouter.swift */; };
+		0246DE9E25FA40B800A6AD10 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246DE9D25FA40B800A6AD10 /* MenuListController.swift */; };
+		0246DEA125FA410800A6AD10 /* MainViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246DEA025FA410800A6AD10 /* MainViewExtension.swift */; };
+		025C134E261ACC800071DDDF /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C1348261ACC800071DDDF /* FriendListPresenter.swift */; };
+		025C134F261ACC800071DDDF /* FriendListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C1349261ACC800071DDDF /* FriendListRouter.swift */; };
+		025C1350261ACC800071DDDF /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C134A261ACC800071DDDF /* FriendListViewController.swift */; };
+		025C1351261ACC800071DDDF /* FriendListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C134B261ACC800071DDDF /* FriendListProtocols.swift */; };
+		025C1352261ACC800071DDDF /* FriendListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C134C261ACC800071DDDF /* FriendListInteractor.swift */; };
+		025C1359261AD6400071DDDF /* FriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025C1357261AD63F0071DDDF /* FriendListCell.xib */; };
+		025C135A261AD6400071DDDF /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C1358261AD63F0071DDDF /* FriendListCell.swift */; };
+		025D12C125E7A9B5001ED43A /* GrocNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025D12C025E7A9B5001ED43A /* GrocNameCell.xib */; };
+		025D12CC25E7D3B7001ED43A /* GrocNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D12CB25E7D3B7001ED43A /* GrocNameCell.swift */; };
+		025D12D025E7E14B001ED43A /* GrocTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D12CE25E7E14B001ED43A /* GrocTextFieldCell.swift */; };
+		025D12D125E7E14B001ED43A /* GrocTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025D12CF25E7E14B001ED43A /* GrocTextFieldCell.xib */; };
+		02664FFF25EE099800A0C3D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02664FFE25EE099800A0C3D1 /* MainViewController.swift */; };
+		0266500325EE0A2B00A0C3D1 /* MainUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266500125EE0A2B00A0C3D1 /* MainUserCell.swift */; };
+		0266500425EE0A2B00A0C3D1 /* MainUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0266500225EE0A2B00A0C3D1 /* MainUserCell.xib */; };
+		0266501925EE4FBA00A0C3D1 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266501725EE4FBA00A0C3D1 /* MenuCell.swift */; };
+		0266501A25EE4FBA00A0C3D1 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0266501825EE4FBA00A0C3D1 /* MenuCell.xib */; };
+		026819A125F8CF5900071780 /* GrocDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026819A025F8CF5900071780 /* GrocDbManager.swift */; };
+		026D5BD225FB694A00C53162 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D5BD125FB694A00C53162 /* User.swift */; };
+		026D5BD525FB7C0D00C53162 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 026D5BD425FB7C0D00C53162 /* .swiftlint.yml */; };
+		026DCEA026146DE700BB056D /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DCE9F26146DE700BB056D /* CommonFunctions.swift */; };
+		026DD7BE2615992500486270 /* FriendRequestsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD7B82615992500486270 /* FriendRequestsPresenter.swift */; };
+		026DD7BF2615992500486270 /* FriendRequestsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD7B92615992500486270 /* FriendRequestsRouter.swift */; };
+		026DD7C02615992500486270 /* FriendRequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD7BA2615992500486270 /* FriendRequestsViewController.swift */; };
+		026DD7C12615992500486270 /* FriendRequestsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD7BB2615992500486270 /* FriendRequestsProtocols.swift */; };
+		026DD7C22615992500486270 /* FriendRequestsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD7BC2615992500486270 /* FriendRequestsInteractor.swift */; };
+		027465A425FA345600A0BFA2 /* GrocExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027465A325FA345600A0BFA2 /* GrocExtension.swift */; };
+		028C8A7A25EF4F7600E8833C /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C8A7825EF4F7600E8833C /* ProfileTableViewCell.swift */; };
+		028C8A7B25EF4F7600E8833C /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028C8A7925EF4F7600E8833C /* ProfileTableViewCell.xib */; };
+		029BFCD126157FC800196BA9 /* AddFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029BFCD026157FC800196BA9 /* AddFriends.storyboard */; };
+		029BFCDD2615818200196BA9 /* AddFriendsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029BFCD72615818200196BA9 /* AddFriendsRouter.swift */; };
+		02E07B682600A811006FC9B2 /* SignUpViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E07B672600A811006FC9B2 /* SignUpViewControllerExtension.swift */; };
+		02E42D8725E4F7A5009FCF28 /* GrocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E42D8625E4F7A5009FCF28 /* GrocViewController.swift */; };
+		02E42D8C25E4FC77009FCF28 /* Grocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E42D8B25E4FC77009FCF28 /* Grocs.swift */; };
+		02F827972615C2830083E566 /* FriendsTabBarModulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F827962615C2830083E566 /* FriendsTabBarModulesBuilder.swift */; };
+		1397DBA725E37B1600ACC628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397DBA625E37B1600ACC628 /* AppDelegate.swift */; };
+		1397DBAB25E37B1600ACC628 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397DBAA25E37B1600ACC628 /* SignUpViewController.swift */; };
+		1397DBAE25E37B1600ACC628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1397DBAC25E37B1600ACC628 /* Main.storyboard */; };
+		1397DBB025E37B1800ACC628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1397DBAF25E37B1800ACC628 /* Assets.xcassets */; };
+		1397DBB325E37B1800ACC628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1397DBB125E37B1800ACC628 /* LaunchScreen.storyboard */; };
+		174049D225E4C8AA0074D17E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174049D125E4C8AA0074D17E /* LogInViewController.swift */; };
+		174049D725E4DD770074D17E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174049D625E4DD770074D17E /* HomeViewController.swift */; };
+		175FAA1325E3D4D900480163 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 175FAA1225E3D4D900480163 /* GoogleService-Info.plist */; };
+		27096D2CBA37DB4810AE19E1 /* Pods_GrocList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F163405B14094CABCF035D /* Pods_GrocList.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0218D5C226159A1F002EC714 /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
+		0218D5C326159A1F002EC714 /* AddFriendsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsPresenter.swift; sourceTree = "<group>"; };
+		0218D5C426159A1F002EC714 /* AddFriendsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsProtocols.swift; sourceTree = "<group>"; };
+		0218D5C526159A1F002EC714 /* AddFriendsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsInteractor.swift; sourceTree = "<group>"; };
+		0218D5D326159AC6002EC714 /* RequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestCell.xib; sourceTree = "<group>"; };
+		0218D5D426159AC6002EC714 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
+		0218D5DC26159B14002EC714 /* AddFriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendCell.swift; sourceTree = "<group>"; };
+		0218D5DD26159B14002EC714 /* AddFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendCell.xib; sourceTree = "<group>"; };
+		0218D5E42615B205002EC714 /* FriendsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTabBarController.swift; sourceTree = "<group>"; };
+		0218D5E72615B2E8002EC714 /* FriendsTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTabBarRouter.swift; sourceTree = "<group>"; };
+		0220F0D42612E78200402367 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		0220F0D72612E79500402367 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		0220F0DD2612E7B500402367 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		0220F0E12612E83B00402367 /* MainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocols.swift; sourceTree = "<group>"; };
+		0220F0E726131C3800402367 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		0220F0EA26131C5B00402367 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		0220F0ED26131D0300402367 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		0220F0F026131D0F00402367 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		0220F0F6261338E400402367 /* SignupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRouter.swift; sourceTree = "<group>"; };
+		0220F0F9261338EF00402367 /* SignupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProtocol.swift; sourceTree = "<group>"; };
+		0220F0FC261338FD00402367 /* SignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenter.swift; sourceTree = "<group>"; };
+		0220F0FF2613390900402367 /* SignupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupInteractor.swift; sourceTree = "<group>"; };
+		0220F10626134C2E00402367 /* GrocViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewProtocols.swift; sourceTree = "<group>"; };
+		0220F10A26134C3F00402367 /* GrocViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewInteractor.swift; sourceTree = "<group>"; };
+		0220F10D26134C4B00402367 /* GrocViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewPresenter.swift; sourceTree = "<group>"; };
+		0220F11026134C5600402367 /* GrocViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewRouter.swift; sourceTree = "<group>"; };
+		0246DE9D25FA40B800A6AD10 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
+		0246DEA025FA410800A6AD10 /* MainViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewExtension.swift; sourceTree = "<group>"; };
+		025C1348261ACC800071DDDF /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
+		025C1349261ACC800071DDDF /* FriendListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRouter.swift; sourceTree = "<group>"; };
+		025C134A261ACC800071DDDF /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		025C134B261ACC800071DDDF /* FriendListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListProtocols.swift; sourceTree = "<group>"; };
+		025C134C261ACC800071DDDF /* FriendListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListInteractor.swift; sourceTree = "<group>"; };
+		025C1357261AD63F0071DDDF /* FriendListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendListCell.xib; sourceTree = "<group>"; };
+		025C1358261AD63F0071DDDF /* FriendListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		025D12C025E7A9B5001ED43A /* GrocNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrocNameCell.xib; sourceTree = "<group>"; };
+		025D12CB25E7D3B7001ED43A /* GrocNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocNameCell.swift; sourceTree = "<group>"; };
+		025D12CE25E7E14B001ED43A /* GrocTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocTextFieldCell.swift; sourceTree = "<group>"; };
+		025D12CF25E7E14B001ED43A /* GrocTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrocTextFieldCell.xib; sourceTree = "<group>"; };
+		02664FFE25EE099800A0C3D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0266500125EE0A2B00A0C3D1 /* MainUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserCell.swift; sourceTree = "<group>"; };
+		0266500225EE0A2B00A0C3D1 /* MainUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainUserCell.xib; sourceTree = "<group>"; };
+		0266501725EE4FBA00A0C3D1 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		0266501825EE4FBA00A0C3D1 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		026819A025F8CF5900071780 /* GrocDbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocDbManager.swift; sourceTree = "<group>"; };
+		026D5BD125FB694A00C53162 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		026D5BD425FB7C0D00C53162 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		026DCE9F26146DE700BB056D /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		026DD7B82615992500486270 /* FriendRequestsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsPresenter.swift; sourceTree = "<group>"; };
+		026DD7B92615992500486270 /* FriendRequestsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsRouter.swift; sourceTree = "<group>"; };
+		026DD7BA2615992500486270 /* FriendRequestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsViewController.swift; sourceTree = "<group>"; };
+		026DD7BB2615992500486270 /* FriendRequestsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsProtocols.swift; sourceTree = "<group>"; };
+		026DD7BC2615992500486270 /* FriendRequestsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestsInteractor.swift; sourceTree = "<group>"; };
+		027465A325FA345600A0BFA2 /* GrocExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocExtension.swift; sourceTree = "<group>"; };
+		028C8A7825EF4F7600E8833C /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		028C8A7925EF4F7600E8833C /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		029BFCD026157FC800196BA9 /* AddFriends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFriends.storyboard; sourceTree = "<group>"; };
+		029BFCD72615818200196BA9 /* AddFriendsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsRouter.swift; sourceTree = "<group>"; };
+		02E07B672600A811006FC9B2 /* SignUpViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerExtension.swift; sourceTree = "<group>"; };
+		02E42D8625E4F7A5009FCF28 /* GrocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewController.swift; sourceTree = "<group>"; };
+		02E42D8B25E4FC77009FCF28 /* Grocs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocs.swift; sourceTree = "<group>"; };
+		02F827962615C2830083E566 /* FriendsTabBarModulesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTabBarModulesBuilder.swift; sourceTree = "<group>"; };
+		0FB51BD7FE4EF2D4209E3CF2 /* Pods-GrocList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrocList.release.xcconfig"; path = "Target Support Files/Pods-GrocList/Pods-GrocList.release.xcconfig"; sourceTree = "<group>"; };
+		1397DBA325E37B1600ACC628 /* GrocList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrocList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1397DBA625E37B1600ACC628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1397DBAA25E37B1600ACC628 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1397DBAD25E37B1600ACC628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1397DBAF25E37B1800ACC628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1397DBB225E37B1800ACC628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1397DBB425E37B1800ACC628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		174049D125E4C8AA0074D17E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		174049D625E4DD770074D17E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		175FAA1225E3D4D900480163 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B93294ECF1C68D29E9DC495 /* Pods-GrocList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrocList.debug.xcconfig"; path = "Target Support Files/Pods-GrocList/Pods-GrocList.debug.xcconfig"; sourceTree = "<group>"; };
+		88F163405B14094CABCF035D /* Pods_GrocList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrocList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1397DBA025E37B1600ACC628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27096D2CBA37DB4810AE19E1 /* Pods_GrocList.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0218D5CC26159A6F002EC714 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0218D5DC26159B14002EC714 /* AddFriendCell.swift */,
+				0218D5DD26159B14002EC714 /* AddFriendCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0218D5E32615B1D0002EC714 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				0218D5E42615B205002EC714 /* FriendsTabBarController.swift */,
+				0218D5E72615B2E8002EC714 /* FriendsTabBarRouter.swift */,
+				02F827962615C2830083E566 /* FriendsTabBarModulesBuilder.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		0220F0D02612E67600402367 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0220F0D12612E68900402367 /* Cells */,
+				0220F0D42612E78200402367 /* MainInteractor.swift */,
+				0220F0D72612E79500402367 /* MainPresenter.swift */,
+				0220F0DD2612E7B500402367 /* MainRouter.swift */,
+				0220F0E12612E83B00402367 /* MainProtocols.swift */,
+				02664FFE25EE099800A0C3D1 /* MainViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		0220F0D12612E68900402367 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0266500125EE0A2B00A0C3D1 /* MainUserCell.swift */,
+				0266500225EE0A2B00A0C3D1 /* MainUserCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0220F0E626131C2200402367 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0220F0EA26131C5B00402367 /* LoginProtocol.swift */,
+				0220F0F026131D0F00402367 /* LoginInteractor.swift */,
+				0220F0ED26131D0300402367 /* LoginPresenter.swift */,
+				0220F0E726131C3800402367 /* LoginRouter.swift */,
+				174049D125E4C8AA0074D17E /* LogInViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		0220F0F4261338BB00402367 /* SignupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0220F0F9261338EF00402367 /* SignupProtocol.swift */,
+				0220F0FC261338FD00402367 /* SignupPresenter.swift */,
+				0220F0F6261338E400402367 /* SignupRouter.swift */,
+				0220F0FF2613390900402367 /* SignupInteractor.swift */,
+				1397DBAA25E37B1600ACC628 /* SignUpViewController.swift */,
+			);
+			path = SignupViewController;
+			sourceTree = "<group>";
+		};
+		0220F10326134BC800402367 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				029BFCCF26157F9400196BA9 /* AddFriends */,
+				0220F10426134BDD00402367 /* GrocViewController */,
+				0220F0F4261338BB00402367 /* SignupViewController */,
+				0220F0E626131C2200402367 /* LoginViewController */,
+				0220F0D02612E67600402367 /* MainViewController */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		0220F10426134BDD00402367 /* GrocViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0220F10526134BF000402367 /* Cells */,
+				0220F10626134C2E00402367 /* GrocViewProtocols.swift */,
+				0220F10A26134C3F00402367 /* GrocViewInteractor.swift */,
+				0220F10D26134C4B00402367 /* GrocViewPresenter.swift */,
+				0220F11026134C5600402367 /* GrocViewRouter.swift */,
+				02E42D8625E4F7A5009FCF28 /* GrocViewController.swift */,
+			);
+			path = GrocViewController;
+			sourceTree = "<group>";
+		};
+		0220F10526134BF000402367 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				025D12C025E7A9B5001ED43A /* GrocNameCell.xib */,
+				025D12CB25E7D3B7001ED43A /* GrocNameCell.swift */,
+				025D12CE25E7E14B001ED43A /* GrocTextFieldCell.swift */,
+				025D12CF25E7E14B001ED43A /* GrocTextFieldCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		025C1347261ACC5B0071DDDF /* FriendList */ = {
+			isa = PBXGroup;
+			children = (
+				025C1356261AD60E0071DDDF /* Cells */,
+				025C1348261ACC800071DDDF /* FriendListPresenter.swift */,
+				025C1349261ACC800071DDDF /* FriendListRouter.swift */,
+				025C134A261ACC800071DDDF /* FriendListViewController.swift */,
+				025C134B261ACC800071DDDF /* FriendListProtocols.swift */,
+				025C134C261ACC800071DDDF /* FriendListInteractor.swift */,
+			);
+			path = FriendList;
+			sourceTree = "<group>";
+		};
+		025C1356261AD60E0071DDDF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				025C1358261AD63F0071DDDF /* FriendListCell.swift */,
+				025C1357261AD63F0071DDDF /* FriendListCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		025D12BC25E7A94E001ED43A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0266501725EE4FBA00A0C3D1 /* MenuCell.swift */,
+				0266501825EE4FBA00A0C3D1 /* MenuCell.xib */,
+				028C8A7825EF4F7600E8833C /* ProfileTableViewCell.swift */,
+				028C8A7925EF4F7600E8833C /* ProfileTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0268199D25F8CAF700071780 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				027465A225FA344000A0BFA2 /* Extensions */,
+				0268199E25F8CAFF00071780 /* Database Manager */,
+				026DCE9F26146DE700BB056D /* CommonFunctions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0268199E25F8CAFF00071780 /* Database Manager */ = {
+			isa = PBXGroup;
+			children = (
+				026819A025F8CF5900071780 /* GrocDbManager.swift */,
+			);
+			path = "Database Manager";
+			sourceTree = "<group>";
+		};
+		027465A225FA344000A0BFA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				027465A325FA345600A0BFA2 /* GrocExtension.swift */,
+				0246DEA025FA410800A6AD10 /* MainViewExtension.swift */,
+				02E07B672600A811006FC9B2 /* SignUpViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		029BFCCF26157F9400196BA9 /* AddFriends */ = {
+			isa = PBXGroup;
+			children = (
+				025C1347261ACC5B0071DDDF /* FriendList */,
+				029BFCD42615811700196BA9 /* AddFriendsViewController */,
+				029BFCD32615810000196BA9 /* FriendRequestsViewController */,
+			);
+			path = AddFriends;
+			sourceTree = "<group>";
+		};
+		029BFCD32615810000196BA9 /* FriendRequestsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				029BFCE42615823A00196BA9 /* Cells */,
+				026DD7B82615992500486270 /* FriendRequestsPresenter.swift */,
+				026DD7B92615992500486270 /* FriendRequestsRouter.swift */,
+				026DD7BA2615992500486270 /* FriendRequestsViewController.swift */,
+				026DD7BB2615992500486270 /* FriendRequestsProtocols.swift */,
+				026DD7BC2615992500486270 /* FriendRequestsInteractor.swift */,
+			);
+			path = FriendRequestsViewController;
+			sourceTree = "<group>";
+		};
+		029BFCD42615811700196BA9 /* AddFriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0218D5CC26159A6F002EC714 /* Cells */,
+				0218D5C526159A1F002EC714 /* AddFriendsInteractor.swift */,
+				0218D5C326159A1F002EC714 /* AddFriendsPresenter.swift */,
+				0218D5C426159A1F002EC714 /* AddFriendsProtocols.swift */,
+				0218D5C226159A1F002EC714 /* AddFriendsViewController.swift */,
+				029BFCD72615818200196BA9 /* AddFriendsRouter.swift */,
+			);
+			path = AddFriendsViewController;
+			sourceTree = "<group>";
+		};
+		029BFCE42615823A00196BA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0218D5D426159AC6002EC714 /* RequestCell.swift */,
+				0218D5D326159AC6002EC714 /* RequestCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		02E42D8925E4FC26009FCF28 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				02E42D8B25E4FC77009FCF28 /* Grocs.swift */,
+				026D5BD125FB694A00C53162 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1397DB9A25E37B1600ACC628 = {
+			isa = PBXGroup;
+			children = (
+				026D5BD425FB7C0D00C53162 /* .swiftlint.yml */,
+				1397DBA525E37B1600ACC628 /* GrocList */,
+				1397DBA425E37B1600ACC628 /* Products */,
+				BDA7D86D6ACF917EB6646B10 /* Pods */,
+				A439B5E35E221E2E7DCFEBDD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1397DBA425E37B1600ACC628 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1397DBA325E37B1600ACC628 /* GrocList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1397DBA525E37B1600ACC628 /* GrocList */ = {
+			isa = PBXGroup;
+			children = (
+				0218D5E32615B1D0002EC714 /* TabBarController */,
+				0220F10326134BC800402367 /* VIPER */,
+				1397DBBD25E37B4100ACC628 /* AppDelegate */,
+				025D12BC25E7A94E001ED43A /* View */,
+				02E42D8925E4FC26009FCF28 /* Entities */,
+				1397DBC025E37B5100ACC628 /* Controllers */,
+				0268199D25F8CAF700071780 /* Helper */,
+				1397DBBB25E37B2C00ACC628 /* StoryBoards */,
+				1397DBBC25E37B3600ACC628 /* Resources */,
+				1397DBC225E37B5800ACC628 /* Plists */,
+			);
+			path = GrocList;
+			sourceTree = "<group>";
+		};
+		1397DBBB25E37B2C00ACC628 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				1397DBAC25E37B1600ACC628 /* Main.storyboard */,
+				1397DBB125E37B1800ACC628 /* LaunchScreen.storyboard */,
+				029BFCD026157FC800196BA9 /* AddFriends.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		1397DBBC25E37B3600ACC628 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1397DBAF25E37B1800ACC628 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1397DBBD25E37B4100ACC628 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1397DBA625E37B1600ACC628 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1397DBC025E37B5100ACC628 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				174049D625E4DD770074D17E /* HomeViewController.swift */,
+				0246DE9D25FA40B800A6AD10 /* MenuListController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1397DBC225E37B5800ACC628 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				175FAA1225E3D4D900480163 /* GoogleService-Info.plist */,
+				1397DBB425E37B1800ACC628 /* Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		A439B5E35E221E2E7DCFEBDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88F163405B14094CABCF035D /* Pods_GrocList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDA7D86D6ACF917EB6646B10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B93294ECF1C68D29E9DC495 /* Pods-GrocList.debug.xcconfig */,
+				0FB51BD7FE4EF2D4209E3CF2 /* Pods-GrocList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1397DBA225E37B1600ACC628 /* GrocList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1397DBB725E37B1800ACC628 /* Build configuration list for PBXNativeTarget "GrocList" */;
+			buildPhases = (
+				026D5BCE25FB38E200C53162 /* ShellScript */,
+				4BFDE8D5166EA853056BA592 /* [CP] Check Pods Manifest.lock */,
+				1397DB9F25E37B1600ACC628 /* Sources */,
+				1397DBA025E37B1600ACC628 /* Frameworks */,
+				1397DBA125E37B1600ACC628 /* Resources */,
+				ECA3020944BD6940E965B0E7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrocList;
+			productName = GrocList;
+			productReference = 1397DBA325E37B1600ACC628 /* GrocList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1397DB9B25E37B1600ACC628 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					1397DBA225E37B1600ACC628 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 1397DB9E25E37B1600ACC628 /* Build configuration list for PBXProject "GrocList" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1397DB9A25E37B1600ACC628;
+			productRefGroup = 1397DBA425E37B1600ACC628 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1397DBA225E37B1600ACC628 /* GrocList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1397DBA125E37B1600ACC628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				026D5BD525FB7C0D00C53162 /* .swiftlint.yml in Resources */,
+				025D12C125E7A9B5001ED43A /* GrocNameCell.xib in Resources */,
+				1397DBB325E37B1800ACC628 /* LaunchScreen.storyboard in Resources */,
+				029BFCD126157FC800196BA9 /* AddFriends.storyboard in Resources */,
+				0266501A25EE4FBA00A0C3D1 /* MenuCell.xib in Resources */,
+				025D12D125E7E14B001ED43A /* GrocTextFieldCell.xib in Resources */,
+				0218D5DF26159B14002EC714 /* AddFriendCell.xib in Resources */,
+				175FAA1325E3D4D900480163 /* GoogleService-Info.plist in Resources */,
+				028C8A7B25EF4F7600E8833C /* ProfileTableViewCell.xib in Resources */,
+				1397DBB025E37B1800ACC628 /* Assets.xcassets in Resources */,
+				0266500425EE0A2B00A0C3D1 /* MainUserCell.xib in Resources */,
+				0218D5D526159AC6002EC714 /* RequestCell.xib in Resources */,
+				1397DBAE25E37B1600ACC628 /* Main.storyboard in Resources */,
+				025C1359261AD6400071DDDF /* FriendListCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		026D5BCE25FB38E200C53162 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		4BFDE8D5166EA853056BA592 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GrocList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECA3020944BD6940E965B0E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrocList/Pods-GrocList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrocList/Pods-GrocList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrocList/Pods-GrocList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1397DB9F25E37B1600ACC628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0218D5C726159A1F002EC714 /* AddFriendsPresenter.swift in Sources */,
+				0246DE9E25FA40B800A6AD10 /* MenuListController.swift in Sources */,
+				02E42D8725E4F7A5009FCF28 /* GrocViewController.swift in Sources */,
+				026DD7BE2615992500486270 /* FriendRequestsPresenter.swift in Sources */,
+				0218D5E82615B2E8002EC714 /* FriendsTabBarRouter.swift in Sources */,
+				026DCEA026146DE700BB056D /* CommonFunctions.swift in Sources */,
+				025C134F261ACC800071DDDF /* FriendListRouter.swift in Sources */,
+				0220F0E22612E83B00402367 /* MainProtocols.swift in Sources */,
+				028C8A7A25EF4F7600E8833C /* ProfileTableViewCell.swift in Sources */,
+				029BFCDD2615818200196BA9 /* AddFriendsRouter.swift in Sources */,
+				0220F0EE26131D0300402367 /* LoginPresenter.swift in Sources */,
+				02664FFF25EE099800A0C3D1 /* MainViewController.swift in Sources */,
+				025D12D025E7E14B001ED43A /* GrocTextFieldCell.swift in Sources */,
+				02E42D8C25E4FC77009FCF28 /* Grocs.swift in Sources */,
+				0266500325EE0A2B00A0C3D1 /* MainUserCell.swift in Sources */,
+				025C135A261AD6400071DDDF /* FriendListCell.swift in Sources */,
+				0220F10E26134C4B00402367 /* GrocViewPresenter.swift in Sources */,
+				0246DEA125FA410800A6AD10 /* MainViewExtension.swift in Sources */,
+				025C1350261ACC800071DDDF /* FriendListViewController.swift in Sources */,
+				0220F0F126131D0F00402367 /* LoginInteractor.swift in Sources */,
+				0218D5C926159A1F002EC714 /* AddFriendsInteractor.swift in Sources */,
+				0220F0EB26131C5B00402367 /* LoginProtocol.swift in Sources */,
+				0220F0E826131C3800402367 /* LoginRouter.swift in Sources */,
+				025C1352261ACC800071DDDF /* FriendListInteractor.swift in Sources */,
+				0218D5E52615B205002EC714 /* FriendsTabBarController.swift in Sources */,
+				026DD7C22615992500486270 /* FriendRequestsInteractor.swift in Sources */,
+				0218D5D626159AC6002EC714 /* RequestCell.swift in Sources */,
+				0218D5DE26159B14002EC714 /* AddFriendCell.swift in Sources */,
+				026DD7C02615992500486270 /* FriendRequestsViewController.swift in Sources */,
+				0220F0DE2612E7B500402367 /* MainRouter.swift in Sources */,
+				027465A425FA345600A0BFA2 /* GrocExtension.swift in Sources */,
+				0220F0D52612E78200402367 /* MainInteractor.swift in Sources */,
+				025D12CC25E7D3B7001ED43A /* GrocNameCell.swift in Sources */,
+				0218D5C626159A1F002EC714 /* AddFriendsViewController.swift in Sources */,
+				1397DBAB25E37B1600ACC628 /* SignUpViewController.swift in Sources */,
+				0220F0F7261338E400402367 /* SignupRouter.swift in Sources */,
+				026DD7BF2615992500486270 /* FriendRequestsRouter.swift in Sources */,
+				025C1351261ACC800071DDDF /* FriendListProtocols.swift in Sources */,
+				0220F11126134C5600402367 /* GrocViewRouter.swift in Sources */,
+				0220F0FA261338EF00402367 /* SignupProtocol.swift in Sources */,
+				0220F10B26134C3F00402367 /* GrocViewInteractor.swift in Sources */,
+				026819A125F8CF5900071780 /* GrocDbManager.swift in Sources */,
+				02E07B682600A811006FC9B2 /* SignUpViewControllerExtension.swift in Sources */,
+				0220F0FD261338FD00402367 /* SignupPresenter.swift in Sources */,
+				02F827972615C2830083E566 /* FriendsTabBarModulesBuilder.swift in Sources */,
+				1397DBA725E37B1600ACC628 /* AppDelegate.swift in Sources */,
+				0220F0D82612E79500402367 /* MainPresenter.swift in Sources */,
+				026DD7C12615992500486270 /* FriendRequestsProtocols.swift in Sources */,
+				026D5BD225FB694A00C53162 /* User.swift in Sources */,
+				0220F1002613390900402367 /* SignupInteractor.swift in Sources */,
+				0220F10726134C2E00402367 /* GrocViewProtocols.swift in Sources */,
+				174049D225E4C8AA0074D17E /* LogInViewController.swift in Sources */,
+				025C134E261ACC800071DDDF /* FriendListPresenter.swift in Sources */,
+				0266501925EE4FBA00A0C3D1 /* MenuCell.swift in Sources */,
+				174049D725E4DD770074D17E /* HomeViewController.swift in Sources */,
+				0218D5C826159A1F002EC714 /* AddFriendsProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1397DBAC25E37B1600ACC628 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1397DBAD25E37B1600ACC628 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1397DBB125E37B1800ACC628 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1397DBB225E37B1800ACC628 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1397DBB525E37B1800ACC628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1397DBB625E37B1800ACC628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1397DBB825E37B1800ACC628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B93294ECF1C68D29E9DC495 /* Pods-GrocList.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/GrocList/Plists/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextgeni.demo.GrocList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1397DBB925E37B1800ACC628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB51BD7FE4EF2D4209E3CF2 /* Pods-GrocList.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/GrocList/Plists/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextgeni.demo.GrocList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1397DB9E25E37B1600ACC628 /* Build configuration list for PBXProject "GrocList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1397DBB525E37B1800ACC628 /* Debug */,
+				1397DBB625E37B1800ACC628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1397DBB725E37B1800ACC628 /* Build configuration list for PBXNativeTarget "GrocList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1397DBB825E37B1800ACC628 /* Debug */,
+				1397DBB925E37B1800ACC628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1397DB9B25E37B1600ACC628 /* Project object */;
+}

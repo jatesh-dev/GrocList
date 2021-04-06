@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GrocNameCell" customModule="GrocList" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GrocNameCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GrocNameCell" rowHeight="60" id="lJo-Ox-ABU" customClass="GrocNameCell" customModule="GrocList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lJo-Ox-ABU" id="Jtb-5p-ZKX">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Groc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HT-Ca-8dk">
+                        <rect key="frame" x="10" y="10" width="44.5" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="YJD-Xr-39G"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Assigned Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCL-xO-oYg">
+                        <rect key="frame" x="315" y="5" width="89" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkk-ca-sZ6">
+                        <rect key="frame" x="10" y="50.5" width="26.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90m-6X-ckt">
+                        <rect key="frame" x="309" y="48" width="95" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mkk-ca-sZ6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9HT-Ca-8dk" secondAttribute="bottom" constant="10" id="0JP-AS-nFs"/>
+                    <constraint firstItem="9HT-Ca-8dk" firstAttribute="leading" secondItem="Jtb-5p-ZKX" secondAttribute="leading" constant="10" id="5mR-SF-o52"/>
+                    <constraint firstAttribute="trailing" secondItem="hCL-xO-oYg" secondAttribute="trailing" constant="10" id="JAd-pD-gLx"/>
+                    <constraint firstItem="hCL-xO-oYg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jtb-5p-ZKX" secondAttribute="leading" constant="20" id="Nbg-Ip-vwX"/>
+                    <constraint firstItem="9HT-Ca-8dk" firstAttribute="top" secondItem="Jtb-5p-ZKX" secondAttribute="top" constant="10" id="Oqo-Xp-sTS"/>
+                    <constraint firstItem="90m-6X-ckt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hCL-xO-oYg" secondAttribute="bottom" constant="15" id="TZ8-6G-mDV"/>
+                    <constraint firstAttribute="bottom" secondItem="90m-6X-ckt" secondAttribute="bottom" constant="5" id="ZA2-Eb-bah"/>
+                    <constraint firstAttribute="bottom" secondItem="mkk-ca-sZ6" secondAttribute="bottom" constant="5" id="b9s-6Q-XEw"/>
+                    <constraint firstItem="90m-6X-ckt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mkk-ca-sZ6" secondAttribute="trailing" constant="10" id="bOb-CR-0Cl"/>
+                    <constraint firstItem="mkk-ca-sZ6" firstAttribute="leading" secondItem="Jtb-5p-ZKX" secondAttribute="leading" constant="10" id="hMq-Zk-TDw"/>
+                    <constraint firstItem="hCL-xO-oYg" firstAttribute="top" secondItem="Jtb-5p-ZKX" secondAttribute="top" constant="5" id="ncm-gd-HzF"/>
+                    <constraint firstItem="hCL-xO-oYg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9HT-Ca-8dk" secondAttribute="trailing" constant="10" id="pGF-cE-p0w"/>
+                    <constraint firstAttribute="trailing" secondItem="90m-6X-ckt" secondAttribute="trailing" constant="10" id="rfU-lX-axu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="assignedDateLabel" destination="mkk-ca-sZ6" id="m3f-Gr-OsC"/>
+                <outlet property="assignedTimeLabel" destination="hCL-xO-oYg" id="TbQ-3n-IoM"/>
+                <outlet property="assigneeName" destination="90m-6X-ckt" id="d3j-NQ-nDS"/>
+                <outlet property="labelGroc" destination="9HT-Ca-8dk" id="aCC-K6-2Y8"/>
+            </connections>
+            <point key="canvasLocation" x="28.985507246376812" y="-129.24107142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

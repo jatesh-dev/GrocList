@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AddFriendsViewController-->
+        <scene sceneID="Rtr-m0-f40">
+            <objects>
+                <viewController storyboardIdentifier="AddFriendsViewController" title="AddFriendsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Od0-LX-cfL" customClass="AddFriendsViewController" customModule="GrocList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qG7-dE-bMi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GKr-lX-Mix">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zWk-Za-Lya"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zWk-Za-Lya" firstAttribute="trailing" secondItem="GKr-lX-Mix" secondAttribute="trailing" id="2hX-qG-DzJ"/>
+                            <constraint firstItem="zWk-Za-Lya" firstAttribute="bottom" secondItem="GKr-lX-Mix" secondAttribute="bottom" id="9nE-5u-9kl"/>
+                            <constraint firstItem="GKr-lX-Mix" firstAttribute="leading" secondItem="zWk-Za-Lya" secondAttribute="leading" id="Mpc-Ru-XL8"/>
+                            <constraint firstItem="GKr-lX-Mix" firstAttribute="top" secondItem="zWk-Za-Lya" secondAttribute="top" id="hap-Qz-hku"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="person.3" catalog="system" id="kZD-6f-vTs"/>
+                    <connections>
+                        <outlet property="tableView" destination="GKr-lX-Mix" id="UAF-Cu-0C6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Foc-o7-bg2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1365" y="-561"/>
+        </scene>
+        <!--FriendRequestsViewController-->
+        <scene sceneID="5Af-n2-HAn">
+            <objects>
+                <viewController storyboardIdentifier="FriendRequestsViewController" title="FriendRequestsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="td1-rO-Lwg" customClass="FriendRequestsViewController" customModule="GrocList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4xr-O0-IbS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Y99-xw-fC2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Friend Requests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNM-3w-YyS">
+                                <rect key="frame" x="0.0" y="441" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vq9-Jq-O2I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vq9-Jq-O2I" firstAttribute="trailing" secondItem="UNM-3w-YyS" secondAttribute="trailing" id="0ob-zr-1p4"/>
+                            <constraint firstItem="vq9-Jq-O2I" firstAttribute="trailing" secondItem="Y99-xw-fC2" secondAttribute="trailing" id="8sC-7g-Dye"/>
+                            <constraint firstItem="vq9-Jq-O2I" firstAttribute="bottom" secondItem="Y99-xw-fC2" secondAttribute="bottom" id="I8q-Ee-1dX"/>
+                            <constraint firstItem="UNM-3w-YyS" firstAttribute="leading" secondItem="vq9-Jq-O2I" secondAttribute="leading" id="Q4j-iN-QH7"/>
+                            <constraint firstItem="Y99-xw-fC2" firstAttribute="top" secondItem="vq9-Jq-O2I" secondAttribute="top" id="jrE-3E-YPx"/>
+                            <constraint firstItem="Y99-xw-fC2" firstAttribute="leading" secondItem="vq9-Jq-O2I" secondAttribute="leading" id="owq-co-lzF"/>
+                            <constraint firstItem="UNM-3w-YyS" firstAttribute="centerY" secondItem="vq9-Jq-O2I" secondAttribute="centerY" id="pxM-ju-2cE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friend Requests" image="person.2" catalog="system" id="0dv-pK-Rh2"/>
+                    <connections>
+                        <outlet property="labelNoFriendRequests" destination="UNM-3w-YyS" id="fxb-8T-TNW"/>
+                        <outlet property="tableView" destination="Y99-xw-fC2" id="K1O-Ri-SKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VoE-LZ-6qe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="-561"/>
+        </scene>
+        <!--FriendListViewController-->
+        <scene sceneID="tSp-Tb-5uW">
+            <objects>
+                <viewController storyboardIdentifier="FriendListViewController" title="FriendListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gUY-tD-dCk" customClass="FriendListViewController" customModule="GrocList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="USO-7E-R0H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="nkX-OU-SJ3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpN-eP-mWM">
+                                <rect key="frame" x="0.0" y="441" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wkt-0X-VOU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hpN-eP-mWM" firstAttribute="leading" secondItem="wkt-0X-VOU" secondAttribute="leading" id="0Hp-yv-lma"/>
+                            <constraint firstItem="nkX-OU-SJ3" firstAttribute="leading" secondItem="wkt-0X-VOU" secondAttribute="leading" id="T6v-oi-wH9"/>
+                            <constraint firstItem="hpN-eP-mWM" firstAttribute="centerY" secondItem="wkt-0X-VOU" secondAttribute="centerY" id="XNU-HD-Wep"/>
+                            <constraint firstItem="nkX-OU-SJ3" firstAttribute="top" secondItem="wkt-0X-VOU" secondAttribute="top" id="kxy-tq-iMZ"/>
+                            <constraint firstItem="wkt-0X-VOU" firstAttribute="trailing" secondItem="hpN-eP-mWM" secondAttribute="trailing" id="pql-Mw-WVL"/>
+                            <constraint firstItem="wkt-0X-VOU" firstAttribute="bottom" secondItem="nkX-OU-SJ3" secondAttribute="bottom" id="qV1-pJ-7wk"/>
+                            <constraint firstItem="wkt-0X-VOU" firstAttribute="trailing" secondItem="nkX-OU-SJ3" secondAttribute="trailing" id="xuX-5V-B95"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friend Requests" image="person.2" catalog="system" id="juy-mo-nAK"/>
+                    <connections>
+                        <outlet property="labelNoFriends" destination="hpN-eP-mWM" id="Ble-wT-0a7"/>
+                        <outlet property="tableView" destination="nkX-OU-SJ3" id="FoY-YH-YSb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csK-Ch-uTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="-561"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
