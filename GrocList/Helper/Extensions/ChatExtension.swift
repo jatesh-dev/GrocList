@@ -194,7 +194,7 @@ extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableV
 			cellReceivedMessage.viewReceivedMessages.layer.cornerRadius = 8.0
 			cellReceivedMessage.viewReceivedMessages.layer.borderWidth = 0.1
 			cellReceivedMessage.labelTimeReceive.text = timeMessage["time"]
-			storageReference.child("ProfilePhotos").child(self.user?.id ?? "").downloadURL { (url, _) in
+            storageReference.child("ProfilePhotos").child(self.user?.userID ?? "").downloadURL { (url, _)in
 				cellReceivedMessage.imageProfile.sd_setImage(with: url)
 			}
 			return cellReceivedMessage

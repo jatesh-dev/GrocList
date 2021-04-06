@@ -41,12 +41,10 @@
 		022FA327261C627800A6B8A7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FA326261C627800A6B8A7 /* ChatViewController.swift */; };
 		0246DE9E25FA40B800A6AD10 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246DE9D25FA40B800A6AD10 /* MenuListController.swift */; };
 		0246DEA125FA410800A6AD10 /* MainViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246DEA025FA410800A6AD10 /* MainViewExtension.swift */; };
-		0250C9B1261C65B600FCAD93 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250C9AA261C65B500FCAD93 /* TableViewCell.swift */; };
 		0250C9B2261C65B600FCAD93 /* CollectionViewSentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250C9AB261C65B500FCAD93 /* CollectionViewSentCell.swift */; };
 		0250C9B3261C65B600FCAD93 /* collectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0250C9AC261C65B500FCAD93 /* collectionViewCell.xib */; };
 		0250C9B4261C65B600FCAD93 /* CollectionViewSentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0250C9AD261C65B500FCAD93 /* CollectionViewSentCell.xib */; };
 		0250C9B7261C65B600FCAD93 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250C9B0261C65B600FCAD93 /* CollectionViewCell.swift */; };
-		0250C9BB261C660500FCAD93 /* Messages Cell in Resources */ = {isa = PBXBuildFile; fileRef = 0250C9B9261C660500FCAD93 /* Messages Cell */; };
 		025C134E261ACC800071DDDF /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C1348261ACC800071DDDF /* FriendListPresenter.swift */; };
 		025C134F261ACC800071DDDF /* FriendListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C1349261ACC800071DDDF /* FriendListRouter.swift */; };
 		025C1350261ACC800071DDDF /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C134A261ACC800071DDDF /* FriendListViewController.swift */; };
@@ -80,6 +78,10 @@
 		02E07B682600A811006FC9B2 /* SignUpViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E07B672600A811006FC9B2 /* SignUpViewControllerExtension.swift */; };
 		02E42D8725E4F7A5009FCF28 /* GrocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E42D8625E4F7A5009FCF28 /* GrocViewController.swift */; };
 		02E42D8C25E4FC77009FCF28 /* Grocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E42D8B25E4FC77009FCF28 /* Grocs.swift */; };
+		02E8FD6C261C6D230001A436 /* TableViewCellReceivedMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8FD68261C6D230001A436 /* TableViewCellReceivedMessages.swift */; };
+		02E8FD6D261C6D230001A436 /* ViewRecievedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E8FD69261C6D230001A436 /* ViewRecievedCell.xib */; };
+		02E8FD6E261C6D230001A436 /* TableViewCellSentMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8FD6A261C6D230001A436 /* TableViewCellSentMessages.swift */; };
+		02E8FD6F261C6D230001A436 /* ViewSentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E8FD6B261C6D230001A436 /* ViewSentCell.xib */; };
 		02F827972615C2830083E566 /* FriendsTabBarModulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F827962615C2830083E566 /* FriendsTabBarModulesBuilder.swift */; };
 		1397DBA725E37B1600ACC628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397DBA625E37B1600ACC628 /* AppDelegate.swift */; };
 		1397DBAB25E37B1600ACC628 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397DBAA25E37B1600ACC628 /* SignUpViewController.swift */; };
@@ -127,12 +129,10 @@
 		022FA326261C627800A6B8A7 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0246DE9D25FA40B800A6AD10 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 		0246DEA025FA410800A6AD10 /* MainViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewExtension.swift; sourceTree = "<group>"; };
-		0250C9AA261C65B500FCAD93 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0250C9AB261C65B500FCAD93 /* CollectionViewSentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewSentCell.swift; sourceTree = "<group>"; };
 		0250C9AC261C65B500FCAD93 /* collectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = collectionViewCell.xib; sourceTree = "<group>"; };
 		0250C9AD261C65B500FCAD93 /* CollectionViewSentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewSentCell.xib; sourceTree = "<group>"; };
 		0250C9B0261C65B600FCAD93 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		0250C9B9261C660500FCAD93 /* Messages Cell */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Messages Cell"; sourceTree = "<group>"; };
 		025C1348261ACC800071DDDF /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
 		025C1349261ACC800071DDDF /* FriendListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRouter.swift; sourceTree = "<group>"; };
 		025C134A261ACC800071DDDF /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +166,10 @@
 		02E07B672600A811006FC9B2 /* SignUpViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerExtension.swift; sourceTree = "<group>"; };
 		02E42D8625E4F7A5009FCF28 /* GrocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewController.swift; sourceTree = "<group>"; };
 		02E42D8B25E4FC77009FCF28 /* Grocs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grocs.swift; sourceTree = "<group>"; };
+		02E8FD68261C6D230001A436 /* TableViewCellReceivedMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellReceivedMessages.swift; sourceTree = "<group>"; };
+		02E8FD69261C6D230001A436 /* ViewRecievedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRecievedCell.xib; sourceTree = "<group>"; };
+		02E8FD6A261C6D230001A436 /* TableViewCellSentMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSentMessages.swift; sourceTree = "<group>"; };
+		02E8FD6B261C6D230001A436 /* ViewSentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewSentCell.xib; sourceTree = "<group>"; };
 		02F827962615C2830083E566 /* FriendsTabBarModulesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTabBarModulesBuilder.swift; sourceTree = "<group>"; };
 		0FB51BD7FE4EF2D4209E3CF2 /* Pods-GrocList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrocList.release.xcconfig"; path = "Target Support Files/Pods-GrocList/Pods-GrocList.release.xcconfig"; sourceTree = "<group>"; };
 		1397DBA325E37B1600ACC628 /* GrocList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrocList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -320,12 +324,11 @@
 		025D12BC25E7A94E001ED43A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0250C9B9261C660500FCAD93 /* Messages Cell */,
+				02E8FD67261C6D230001A436 /* Messages Cell */,
 				0250C9B0261C65B600FCAD93 /* CollectionViewCell.swift */,
 				0250C9AC261C65B500FCAD93 /* collectionViewCell.xib */,
 				0250C9AB261C65B500FCAD93 /* CollectionViewSentCell.swift */,
 				0250C9AD261C65B500FCAD93 /* CollectionViewSentCell.xib */,
-				0250C9AA261C65B500FCAD93 /* TableViewCell.swift */,
 				0266501725EE4FBA00A0C3D1 /* MenuCell.swift */,
 				0266501825EE4FBA00A0C3D1 /* MenuCell.xib */,
 				028C8A7825EF4F7600E8833C /* ProfileTableViewCell.swift */,
@@ -419,6 +422,17 @@
 				026D5BD125FB694A00C53162 /* User.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		02E8FD67261C6D230001A436 /* Messages Cell */ = {
+			isa = PBXGroup;
+			children = (
+				02E8FD68261C6D230001A436 /* TableViewCellReceivedMessages.swift */,
+				02E8FD69261C6D230001A436 /* ViewRecievedCell.xib */,
+				02E8FD6A261C6D230001A436 /* TableViewCellSentMessages.swift */,
+				02E8FD6B261C6D230001A436 /* ViewSentCell.xib */,
+			);
+			path = "Messages Cell";
 			sourceTree = "<group>";
 		};
 		1397DB9A25E37B1600ACC628 = {
@@ -579,16 +593,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E8FD6F261C6D230001A436 /* ViewSentCell.xib in Resources */,
 				026D5BD525FB7C0D00C53162 /* .swiftlint.yml in Resources */,
 				025D12C125E7A9B5001ED43A /* GrocNameCell.xib in Resources */,
 				1397DBB325E37B1800ACC628 /* LaunchScreen.storyboard in Resources */,
+				02E8FD6D261C6D230001A436 /* ViewRecievedCell.xib in Resources */,
 				0250C9B3261C65B600FCAD93 /* collectionViewCell.xib in Resources */,
 				029BFCD126157FC800196BA9 /* AddFriends.storyboard in Resources */,
 				0266501A25EE4FBA00A0C3D1 /* MenuCell.xib in Resources */,
 				025D12D125E7E14B001ED43A /* GrocTextFieldCell.xib in Resources */,
 				0218D5DF26159B14002EC714 /* AddFriendCell.xib in Resources */,
 				175FAA1325E3D4D900480163 /* GoogleService-Info.plist in Resources */,
-				0250C9BB261C660500FCAD93 /* Messages Cell in Resources */,
 				028C8A7B25EF4F7600E8833C /* ProfileTableViewCell.xib in Resources */,
 				1397DBB025E37B1800ACC628 /* Assets.xcassets in Resources */,
 				0266500425EE0A2B00A0C3D1 /* MainUserCell.xib in Resources */,
@@ -675,9 +690,9 @@
 				025C134F261ACC800071DDDF /* FriendListRouter.swift in Sources */,
 				0220F0E22612E83B00402367 /* MainProtocols.swift in Sources */,
 				028C8A7A25EF4F7600E8833C /* ProfileTableViewCell.swift in Sources */,
+				02E8FD6C261C6D230001A436 /* TableViewCellReceivedMessages.swift in Sources */,
 				029BFCDD2615818200196BA9 /* AddFriendsRouter.swift in Sources */,
 				0220F0EE26131D0300402367 /* LoginPresenter.swift in Sources */,
-				0250C9B1261C65B600FCAD93 /* TableViewCell.swift in Sources */,
 				02664FFF25EE099800A0C3D1 /* MainViewController.swift in Sources */,
 				025D12D025E7E14B001ED43A /* GrocTextFieldCell.swift in Sources */,
 				02E42D8C25E4FC77009FCF28 /* Grocs.swift in Sources */,
@@ -696,6 +711,7 @@
 				026DD7C22615992500486270 /* FriendRequestsInteractor.swift in Sources */,
 				0218D5D626159AC6002EC714 /* RequestCell.swift in Sources */,
 				022FA31F261C622000A6B8A7 /* ActivityIndicatorControl.swift in Sources */,
+				02E8FD6E261C6D230001A436 /* TableViewCellSentMessages.swift in Sources */,
 				022FA327261C627800A6B8A7 /* ChatViewController.swift in Sources */,
 				0218D5DE26159B14002EC714 /* AddFriendCell.swift in Sources */,
 				026DD7C02615992500486270 /* FriendRequestsViewController.swift in Sources */,

@@ -71,7 +71,7 @@ class DbManager {
 	
 	/****CONTACT SCREEN**/
 	func checkAndCreateChatRoom(user: User, completion: @escaping (Result<String, Error>) -> Void) {
-		guard let fromID = Auth.auth().currentUser?.uid, let toID = user.id  else {
+        guard let fromID = Auth.auth().currentUser?.uid, let toID = user.userID  else {
 			print("CURRENT USER")
 			return
 		}
