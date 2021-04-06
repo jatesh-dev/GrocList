@@ -33,6 +33,12 @@
 		0220F10B26134C3F00402367 /* GrocViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F10A26134C3F00402367 /* GrocViewInteractor.swift */; };
 		0220F10E26134C4B00402367 /* GrocViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F10D26134C4B00402367 /* GrocViewPresenter.swift */; };
 		0220F11126134C5600402367 /* GrocViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0220F11026134C5600402367 /* GrocViewRouter.swift */; };
+		022FA306261C61F900A6B8A7 /* ChatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FA305261C61F900A6B8A7 /* ChatExtension.swift */; };
+		022FA31F261C622000A6B8A7 /* ActivityIndicatorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FA31C261C621F00A6B8A7 /* ActivityIndicatorControl.swift */; };
+		022FA320261C622000A6B8A7 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FA31D261C621F00A6B8A7 /* Messages.swift */; };
+		022FA321261C622000A6B8A7 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FA31E261C621F00A6B8A7 /* ActivityIndicator.swift */; };
+		022FA324261C625500A6B8A7 /* dbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FA323261C625500A6B8A7 /* dbManager.swift */; };
+		022FA327261C627800A6B8A7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FA326261C627800A6B8A7 /* ChatViewController.swift */; };
 		0246DE9E25FA40B800A6AD10 /* MenuListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246DE9D25FA40B800A6AD10 /* MenuListController.swift */; };
 		0246DEA125FA410800A6AD10 /* MainViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246DEA025FA410800A6AD10 /* MainViewExtension.swift */; };
 		025C134E261ACC800071DDDF /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025C1348261ACC800071DDDF /* FriendListPresenter.swift */; };
@@ -107,6 +113,12 @@
 		0220F10A26134C3F00402367 /* GrocViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewInteractor.swift; sourceTree = "<group>"; };
 		0220F10D26134C4B00402367 /* GrocViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewPresenter.swift; sourceTree = "<group>"; };
 		0220F11026134C5600402367 /* GrocViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrocViewRouter.swift; sourceTree = "<group>"; };
+		022FA305261C61F900A6B8A7 /* ChatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatExtension.swift; sourceTree = "<group>"; };
+		022FA31C261C621F00A6B8A7 /* ActivityIndicatorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorControl.swift; sourceTree = "<group>"; };
+		022FA31D261C621F00A6B8A7 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		022FA31E261C621F00A6B8A7 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		022FA323261C625500A6B8A7 /* dbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dbManager.swift; sourceTree = "<group>"; };
+		022FA326261C627800A6B8A7 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0246DE9D25FA40B800A6AD10 /* MenuListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListController.swift; sourceTree = "<group>"; };
 		0246DEA025FA410800A6AD10 /* MainViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewExtension.swift; sourceTree = "<group>"; };
 		025C1348261ACC800071DDDF /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
@@ -317,6 +329,7 @@
 		0268199E25F8CAFF00071780 /* Database Manager */ = {
 			isa = PBXGroup;
 			children = (
+				022FA323261C625500A6B8A7 /* dbManager.swift */,
 				026819A025F8CF5900071780 /* GrocDbManager.swift */,
 			);
 			path = "Database Manager";
@@ -325,6 +338,7 @@
 		027465A225FA344000A0BFA2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				022FA305261C61F900A6B8A7 /* ChatExtension.swift */,
 				027465A325FA345600A0BFA2 /* GrocExtension.swift */,
 				0246DEA025FA410800A6AD10 /* MainViewExtension.swift */,
 				02E07B672600A811006FC9B2 /* SignUpViewControllerExtension.swift */,
@@ -380,6 +394,9 @@
 		02E42D8925E4FC26009FCF28 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				022FA31E261C621F00A6B8A7 /* ActivityIndicator.swift */,
+				022FA31C261C621F00A6B8A7 /* ActivityIndicatorControl.swift */,
+				022FA31D261C621F00A6B8A7 /* Messages.swift */,
 				02E42D8B25E4FC77009FCF28 /* Grocs.swift */,
 				026D5BD125FB694A00C53162 /* User.swift */,
 			);
@@ -452,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				174049D625E4DD770074D17E /* HomeViewController.swift */,
+				022FA326261C627800A6B8A7 /* ChatViewController.swift */,
 				0246DE9D25FA40B800A6AD10 /* MenuListController.swift */,
 			);
 			path = Controllers;
@@ -629,6 +647,7 @@
 				0218D5C726159A1F002EC714 /* AddFriendsPresenter.swift in Sources */,
 				0246DE9E25FA40B800A6AD10 /* MenuListController.swift in Sources */,
 				02E42D8725E4F7A5009FCF28 /* GrocViewController.swift in Sources */,
+				022FA306261C61F900A6B8A7 /* ChatExtension.swift in Sources */,
 				026DD7BE2615992500486270 /* FriendRequestsPresenter.swift in Sources */,
 				0218D5E82615B2E8002EC714 /* FriendsTabBarRouter.swift in Sources */,
 				026DCEA026146DE700BB056D /* CommonFunctions.swift in Sources */,
@@ -641,6 +660,7 @@
 				025D12D025E7E14B001ED43A /* GrocTextFieldCell.swift in Sources */,
 				02E42D8C25E4FC77009FCF28 /* Grocs.swift in Sources */,
 				0266500325EE0A2B00A0C3D1 /* MainUserCell.swift in Sources */,
+				022FA321261C622000A6B8A7 /* ActivityIndicator.swift in Sources */,
 				025C135A261AD6400071DDDF /* FriendListCell.swift in Sources */,
 				0220F10E26134C4B00402367 /* GrocViewPresenter.swift in Sources */,
 				0246DEA125FA410800A6AD10 /* MainViewExtension.swift in Sources */,
@@ -653,6 +673,8 @@
 				0218D5E52615B205002EC714 /* FriendsTabBarController.swift in Sources */,
 				026DD7C22615992500486270 /* FriendRequestsInteractor.swift in Sources */,
 				0218D5D626159AC6002EC714 /* RequestCell.swift in Sources */,
+				022FA31F261C622000A6B8A7 /* ActivityIndicatorControl.swift in Sources */,
+				022FA327261C627800A6B8A7 /* ChatViewController.swift in Sources */,
 				0218D5DE26159B14002EC714 /* AddFriendCell.swift in Sources */,
 				026DD7C02615992500486270 /* FriendRequestsViewController.swift in Sources */,
 				0220F0DE2612E7B500402367 /* MainRouter.swift in Sources */,
@@ -666,6 +688,7 @@
 				025C1351261ACC800071DDDF /* FriendListProtocols.swift in Sources */,
 				0220F11126134C5600402367 /* GrocViewRouter.swift in Sources */,
 				0220F0FA261338EF00402367 /* SignupProtocol.swift in Sources */,
+				022FA320261C622000A6B8A7 /* Messages.swift in Sources */,
 				0220F10B26134C3F00402367 /* GrocViewInteractor.swift in Sources */,
 				026819A125F8CF5900071780 /* GrocDbManager.swift in Sources */,
 				02E07B682600A811006FC9B2 /* SignUpViewControllerExtension.swift in Sources */,
@@ -679,6 +702,7 @@
 				0220F10726134C2E00402367 /* GrocViewProtocols.swift in Sources */,
 				174049D225E4C8AA0074D17E /* LogInViewController.swift in Sources */,
 				025C134E261ACC800071DDDF /* FriendListPresenter.swift in Sources */,
+				022FA324261C625500A6B8A7 /* dbManager.swift in Sources */,
 				0266501925EE4FBA00A0C3D1 /* MenuCell.swift in Sources */,
 				174049D725E4DD770074D17E /* HomeViewController.swift in Sources */,
 				0218D5C826159A1F002EC714 /* AddFriendsProtocols.swift in Sources */,
