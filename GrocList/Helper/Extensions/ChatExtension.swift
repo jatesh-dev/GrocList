@@ -159,7 +159,7 @@ extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableV
 		titleLbl.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
 		
 		let imageView = UIImageView()
-		storageReference.child("ProfilePhotos").child(user?.id ?? "").downloadURL { (url, _) in
+		storageReference.child("ProfilePhotos").child(user?.userID ?? "").downloadURL { (url, _) in
 			imageView.sd_setImage(with: url)
 		}
 		imageView.translatesAutoresizingMaskIntoConstraints = false
