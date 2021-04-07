@@ -25,8 +25,7 @@ class AddFriendsViewController: UIViewController {
         super.viewDidLoad()
         guard let userID: String = Auth.auth().currentUser?.uid else { return }
         self.currentUserID = userID
-        presenter?.getFriendList(userID: userID)
-        presenter?.getAllUsersExceptFriends()
+        presenter?.getAllUsersExceptFriends(roomID: userID)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -51,7 +50,7 @@ extension AddFriendsViewController: UITableViewDelegate, UITableViewDataSource {
             switch status {
             case .success(let url):
                 cell.imageViewProfilePicture.kf.indicatorType = .activity
-                cell.imageViewProfilePicture.kf.setImage(with: url)
+                cell.imageViewProfilePicture.kf.setImage(with: url, placeholder: UIImage(named: "user"))
             case .failure(let error):
                 print("Storage Error: ", error)
             }
@@ -95,8 +94,7 @@ extension AddFriendsViewController: AddFriendsViewProtocol, AddFriendCellDelegat
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    self.presenter?.getFriendList(userID: self.currentUserID)
-                    self.presenter?.getAllUsersExceptFriends()
+                    self.presenter?.getAllUsersExceptFriends(roomID: self.currentUserID)
                 }
             case .failure(let error):
                 print("Error Occured: ", error)

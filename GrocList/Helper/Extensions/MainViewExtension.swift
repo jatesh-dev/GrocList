@@ -10,18 +10,10 @@ import Firebase
 import Kingfisher
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainViewProtocol {
-    func checkFriends(userID: [String]) {
-        self.friends.append(contentsOf: userID)
-    }
     
     func updateView(users: [User]) {
-        self.friendList = [User]()
-        for user in users {
-            if friends.contains(user.userID!) {
-                friendList.append(user)
-            }
-        }
-        
+        self.friendList.removeAll()
+        friendList.append(contentsOf: users)
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.hideActivityIndicator()
@@ -51,7 +43,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVi
             switch status {
             case .success(let url):
                 cell.imageViewProfilePicture.kf.indicatorType = .activity
-                cell.imageViewProfilePicture.kf.setImage(with: url)
+                cell.imageViewProfilePicture.kf.setImage(with: url, placeholder: UIImage(named: "user"))
             case .failure(let error):
                 print("Storage Error: ", error)
             }

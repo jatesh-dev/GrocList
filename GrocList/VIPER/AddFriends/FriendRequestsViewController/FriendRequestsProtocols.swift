@@ -19,8 +19,7 @@ protocol FriendRequestsPresenterProtocol: class {
     var view: FriendRequestsViewProtocol? { get set }
     var interactor: FriendRequestsInteractorInputProtocol? { get set }
     
-    func getAllFriendRequests()
-    func getFriendRequests(roomID: String)
+    func getAllFriendRequests(roomID: String)
     func changeFriendRequestStatus(accept: Bool, userID: String, roomKey: String)
 }
 
@@ -33,8 +32,7 @@ protocol FriendRequestsInteractorOutputProtocol: class {
 protocol FriendRequestsInteractorInputProtocol: class {
 
     var presenter: FriendRequestsInteractorOutputProtocol? { get set }
-    func getAllRequestsFromDB()
-    func getFriendRequests(roomID: String)
+    func getAllRequestsFromDB(roomID: String)
     func changeFriendRequestStatusIntoDB(accept: Bool, userID: String, roomKey: String)
     /* Presenter -> Interactor */
 }

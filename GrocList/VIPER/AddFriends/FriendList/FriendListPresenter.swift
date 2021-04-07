@@ -31,7 +31,7 @@ final class FriendListPresenter {
 
 extension FriendListPresenter: FriendListPresenterProtocol {
     func getMyFriendList(myUserID: String) {
-        interactor?.getFriends(userID: myUserID)
+        interactor?.getUsers(roomID: myUserID)
     }
 }
 extension FriendListPresenter: FriendListInteractorOutputProtocol {

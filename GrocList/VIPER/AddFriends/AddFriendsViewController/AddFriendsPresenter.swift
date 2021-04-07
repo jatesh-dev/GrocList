@@ -30,13 +30,12 @@ final class AddFriendsPresenter {
 }
 
 extension AddFriendsPresenter: AddFriendsPresenterProtocol {
-    func getFriendList(userID: String) {
-        view?.showLoader()
-        interactor?.getFriends(roomID: userID)
+    func getAllUsersExceptFriends(roomID: String) {
+        interactor?.getAllUsersFromDB(roomID: roomID)
     }
     
-    func getAllUsersExceptFriends() {
-        interactor?.getAllUsersFromDB()
+    func getFriendList(userID: String) {
+        view?.showLoader()
     }
 }
 

@@ -9,16 +9,49 @@
 import UIKit
 
 final class FriendRequestsInteractor {
-
+    
     weak var presenter: FriendRequestsInteractorOutputProtocol?
-    var users = [User]()
-    var friends = ["": ""]
+    var friends = [User]()
+    var friendsIds = ["": ""]
     deinit {
         print("deinit FriendRequestsInteractor")
     }
 }
 
 extension FriendRequestsInteractor: FriendRequestsInteractorInputProtocol {
+    func getAllRequestsFromDB(roomID: String) {
+        eventDbChildAdded(roomID)
+        eventDbChildUpdate(roomID)
+        eventDbChildRemoved(roomID)
+    }
+
+    func getFriends(userID: String) {
+        GrocDbManager.shared.checkRequests(roomKey: userID) { status in
+            switch status {
+            case .success(let friends):
+                self.friendsIds = [:]
+                for friend in friends {
+                    self.friendsIds.updateValue(friend.value, forKey: friend.key)
+                }
+                self.sortFriends()
+            case .failure(let error):
+                print("Error: ", error)
+            }
+        }
+    }
+    
+    func sortFriends() {
+        var arr: [String] = []
+        var requests = [User]()
+        for friend in friendsIds where friend.value == "0" {
+            arr.append(friend.key)
+        }
+        for user in friends where arr.contains(user.userID ?? "") {
+            requests.append(user)
+        }
+        presenter?.fetchedFriendRequests(requests: requests)
+    }
+    
     func changeFriendRequestStatusIntoDB(accept: Bool, userID: String, roomKey: String) {
         if accept {
             GrocDbManager.shared.checkFriends(currentUserID: roomKey, secondUser: userID) { status in
@@ -29,8 +62,7 @@ extension FriendRequestsInteractor: FriendRequestsInteractorInputProtocol {
                         case .success:
                             print("Friend Added")
                             DispatchQueue.main.async {
-                                self.getFriendRequests(roomID: roomKey)
-                                self.getAllRequestsFromDB()
+                                self.getAllRequestsFromDB(roomID: roomKey)
                             }
                         case .failure(let error):
                             print("Error: ", error)
@@ -46,8 +78,7 @@ extension FriendRequestsInteractor: FriendRequestsInteractorInputProtocol {
                 case .success:
                     print("Request Declined")
                     DispatchQueue.main.async {
-                        self.getFriendRequests(roomID: roomKey)
-                        self.getAllRequestsFromDB()
+                        self.getAllRequestsFromDB(roomID: roomKey)
                     }
                 case .failure(let error):
                     print("Error: ", error)
@@ -56,41 +87,43 @@ extension FriendRequestsInteractor: FriendRequestsInteractorInputProtocol {
         }
     }
     
-    func getFriendRequests(roomID: String) {
-        GrocDbManager.shared.checkRequests(roomKey: roomID) { status in
-            switch status {
-            case .success(let friend):
-                self.friends = friend
+    fileprivate func eventDbChildUpdate(_ roomID: String) {
+        GrocDbManager.shared.usersUpdated(eventType: .childChanged) {(users) in
+            self.friends = [User]()
+            switch users {
+            case .success(let user):
+                self.friends.append(contentsOf: user)
+                self.getFriends(userID: roomID)
             case .failure(let error):
                 print("Error: ", error)
             }
         }
     }
     
-    func sortRequests() {
-        var arr: [String] = []
-        var requests = [User]()
-        for friend in friends where friend.value == "0" {
-            arr.append(friend.key)
-        }
-        for user in users where arr.contains(user.userID ?? "") {
-            requests.append(user)
-        }
-        presenter?.fetchedFriendRequests(requests: requests)
-    }
-        
-    func getAllRequestsFromDB() {
-        self.users = [User]()
-        GrocDbManager.shared.getAllUsers {(users) in
+    fileprivate func eventDbChildAdded(_ roomID: String) {
+        GrocDbManager.shared.usersUpdated(eventType: .childAdded) {(users) in
+            self.friends = [User]()
             switch users {
             case .success(let user):
-                DispatchQueue.main.async {
-                    self.users.append(contentsOf: user)
-                    self.sortRequests()
-                }
+                self.friends.append(contentsOf: user)
+                self.getFriends(userID: roomID)
             case .failure(let error):
                 print("Error: ", error)
             }
         }
     }
- }
+    
+    fileprivate func eventDbChildRemoved(_ roomID: String) {
+        GrocDbManager.shared.usersUpdated(eventType: .childRemoved) {(users) in
+            self.friends = [User]()
+            switch users {
+            case .success(let user):
+                self.friends.append(contentsOf: user)
+                self.getFriends(userID: roomID)
+            case .failure(let error):
+                print("Error: ", error)
+            }
+        }
+    }
+    
+}

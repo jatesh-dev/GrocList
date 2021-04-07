@@ -53,7 +53,7 @@ extension FriendListViewController: UITableViewDelegate, UITableViewDataSource {
         GrocDbManager.shared.getProfilePicture(userID: friends[indexPath.row].userID ?? "") {(status) in
             switch status {
             case .success(let url):
-                cell.imageViewProfilePicture.kf.setImage(with: url)
+                cell.imageViewProfilePicture.kf.setImage(with: url, placeholder: UIImage(named: "user"))
             case .failure(let error):
                 print("Storage Error: ", error)
             }

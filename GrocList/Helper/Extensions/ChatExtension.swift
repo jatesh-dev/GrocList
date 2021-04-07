@@ -126,7 +126,7 @@ extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableV
 		let imageView = UIImageView()
 		storageReference.child("ProfilePhotos").child(user?.userID ?? "").downloadURL { (url, _) in
             imageView.kf.indicatorType = .activity
-            imageView.kf.setImage(with: url)
+            imageView.kf.setImage(with: url, placeholder: UIImage(named: "user"))
 		}
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		imageView.widthAnchor.constraint(equalToConstant: 45).isActive = true
@@ -163,7 +163,7 @@ extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableV
 			cellReceivedMessage.labelTimeReceive.text = timeMessage["time"]
             storageReference.child("ProfilePhotos").child(self.user?.userID ?? "").downloadURL { (url, _)in
                 cellReceivedMessage.imageView?.kf.indicatorType = .activity
-                cellReceivedMessage.imageProfile.kf.setImage(with: url)
+                cellReceivedMessage.imageProfile.kf.setImage(with: url, placeholder: UIImage(named: "user"))
 			}
 			return cellReceivedMessage
 		} else {

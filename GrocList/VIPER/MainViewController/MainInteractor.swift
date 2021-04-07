@@ -9,28 +9,74 @@ import Foundation
 
 class MainInteractor: MainInteractorInputProtocol {
     var presenter: MainInteractorOutputProtocol?
-    var friends: [String: String] = [:]
-    func getUsers() {
-        GrocDbManager.shared.getAllUsers {(users) in
-            switch users {
-            case .success(let user):
-                self.presenter?.fetchedUsers(users: user)
-            case .failure(let error):
-                print("Error: ", error)
-            }
-        }
+    var friends = [User]()
+    var friendsIds: [String] = []
+    func getUsers(roomID: String) {
+        eventDbChildAdded(roomID)
+        eventDbChildUpdate(roomID)
+        eventDbChildRemoved(roomID)
     }
 
     func getFriends(roomID: String) {
         GrocDbManager.shared.getUsersWithGrocs(roomKey: roomID) { status in
             switch status {
             case .success(let friends):
-                self.friends = friends
-                var arr: [String] = []
+                self.friendsIds = []
                 for friend in friends {
-                    arr.append(friend.key)
+                    self.friendsIds.append(friend.key)
                 }
-                self.presenter?.friendsIDs(userID: arr)
+                self.sortFriends()
+            case .failure(let error):
+                print("Error: ", error)
+            }
+        }
+    }
+    
+    func sortFriends() {
+        var allFriends = [User]()
+        for user in friends {
+            if friendsIds.contains(user.userID!) {
+                allFriends.append(user)
+            }
+        }
+        DispatchQueue.main.async {
+            self.presenter?.fetchedFriends(users: allFriends)
+        }
+    }
+    
+    fileprivate func eventDbChildUpdate(_ roomID: String) {
+        GrocDbManager.shared.usersUpdated(eventType: .childChanged) {(users) in
+            self.friends = [User]()
+            switch users {
+            case .success(let user):
+                self.friends.append(contentsOf: user)
+                self.getFriends(roomID: roomID)
+            case .failure(let error):
+                print("Error: ", error)
+            }
+        }
+    }
+    
+    fileprivate func eventDbChildAdded(_ roomID: String) {
+        GrocDbManager.shared.usersUpdated(eventType: .childAdded) {(users) in
+            self.friends = [User]()
+            switch users {
+            case .success(let user):
+                self.friends.append(contentsOf: user)
+                self.getFriends(roomID: roomID)
+            case .failure(let error):
+                print("Error: ", error)
+            }
+        }
+    }
+    
+    fileprivate func eventDbChildRemoved(_ roomID: String) {
+        GrocDbManager.shared.usersUpdated(eventType: .childRemoved) {(users) in
+            self.friends = [User]()
+            switch users {
+            case .success(let user):
+                self.friends.append(contentsOf: user)
+                self.getFriends(roomID: roomID)
             case .failure(let error):
                 print("Error: ", error)
             }
