@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" semanticContentAttribute="forceLeftToRight" restorationIdentifier="CollectionViewSentCell" reuseIdentifier="sentMessages" id="hUp-8J-qTo" customClass="CollectionViewSentCell" customModule="GrocList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="206"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rcL-U4-VNo">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="206"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zz0-TG-l6a">
+                        <rect key="frame" x="317.5" y="0.0" width="55.5" height="49"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.1753758996" green="0.39913167649999998" blue="0.59700644140000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM5-zZ-OVw">
+                        <rect key="frame" x="10" y="16" width="363" height="174"/>
+                        <string key="text"> hsajkdjkashd hdjas dhja dhj adh ahd ahsd ahd ahskd  hsajkdjkashd hdjas dhja dhj adh ahd ahsd ahd ahskd  hsajkdjkashd hdjas dhja dhj adh ahd ahsd ahd ahskd  hsajkdjkashd hdjas dhja dhj adh ahd ahsd ahd ahskd  hsajkdjkashd hdjas dhja dhj adh ahd ahsd ahd ahskd </string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nM5-zZ-OVw" secondAttribute="bottom" constant="16" id="Eut-NW-SYt"/>
+                    <constraint firstItem="nM5-zZ-OVw" firstAttribute="centerX" secondItem="rcL-U4-VNo" secondAttribute="centerX" id="K71-cK-unE"/>
+                    <constraint firstAttribute="trailing" secondItem="nM5-zZ-OVw" secondAttribute="trailing" constant="10" id="MPV-jO-Qas"/>
+                    <constraint firstItem="nM5-zZ-OVw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rcL-U4-VNo" secondAttribute="leading" id="cbf-RJ-MfS"/>
+                    <constraint firstItem="nM5-zZ-OVw" firstAttribute="centerY" secondItem="rcL-U4-VNo" secondAttribute="centerY" id="spd-2g-ZXb"/>
+                    <constraint firstItem="nM5-zZ-OVw" firstAttribute="top" secondItem="rcL-U4-VNo" secondAttribute="top" constant="16" id="wfM-33-yrk"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="383" height="206"/>
+            <connections>
+                <outlet property="labelSentMessages" destination="nM5-zZ-OVw" id="bWz-xc-HLS"/>
+                <outlet property="viewSentMessages" destination="Zz0-TG-l6a" id="WVE-so-BkD"/>
+            </connections>
+            <point key="canvasLocation" x="183.33333333333334" y="12.053571428571429"/>
+        </collectionViewCell>
+    </objects>
+</document>

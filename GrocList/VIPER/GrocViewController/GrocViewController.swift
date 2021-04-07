@@ -28,7 +28,7 @@ class GrocViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "GrocList"
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.09019607843, green: 0.3568627451, blue: 0.6196078431, alpha: 1)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "chat"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "chat"), style: .plain, target: self, action: #selector(chatRoom))
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backScreen))
         setUpGrocCells()
         self.hideKeyboardWhenTappedAround()
@@ -47,6 +47,11 @@ class GrocViewController: UIViewController {
     
     @objc private func backScreen() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc private func chatRoom() {
+        let chatController = ChatRouter.createModule(chatKey: grocKey ?? "")
+        navigationController?.pushViewController(chatController, animated: true)
     }
     
     private func setUpGrocCells () {
