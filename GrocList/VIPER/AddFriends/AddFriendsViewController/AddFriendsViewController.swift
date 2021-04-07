@@ -15,7 +15,8 @@ class AddFriendsViewController: UIViewController {
 	var presenter: AddFriendsPresenterProtocol?
     var suggestions = [User]()
     let spinner = UIActivityIndicatorView(style: .large)
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var labelNoSuggesions: UILabel!
     deinit {
         print("deinit AddFriendsViewController")
     }
@@ -26,7 +27,7 @@ class AddFriendsViewController: UIViewController {
         guard let userID: String = Auth.auth().currentUser?.uid else { return }
         self.currentUserID = userID
         presenter?.getAllUsersExceptFriends(roomID: userID)
-        
+        labelNoSuggesions.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         register()
@@ -75,6 +76,11 @@ extension AddFriendsViewController: AddFriendsViewProtocol, AddFriendCellDelegat
         self.suggestions.append(contentsOf: users)
         DispatchQueue.main.async {
             self.hideLoader()
+            if self.suggestions.count > 0 {
+                self.labelNoSuggesions.isHidden = true
+            } else {
+                self.labelNoSuggesions.isHidden = false
+            }
             self.tableView.reloadData()
         }
     }
