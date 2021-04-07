@@ -11,6 +11,7 @@ class GrocViewController: UIViewController {
     var assigneeName: String = ""
     var activityView: UIActivityIndicatorView?
     var presenter: GrocViewPresenterProtocol?
+    var secondUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,7 @@ class GrocViewController: UIViewController {
     }
     
     @objc private func chatRoom() {
-        let chatController = ChatRouter.createModule(chatKey: grocKey ?? "")
+        let chatController = ChatRouter.createModule(chatKey: grocKey ?? "", user: secondUser)
         navigationController?.pushViewController(chatController, animated: true)
     }
     

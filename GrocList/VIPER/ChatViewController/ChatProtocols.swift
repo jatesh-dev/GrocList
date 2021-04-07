@@ -12,7 +12,7 @@ import Foundation
 import UIKit
 // MARK: Wireframe -
 protocol ChatWireframeProtocol: class {
-    static func createModule (chatKey: String) -> UIViewController
+    static func createModule (chatKey: String, user: User?) -> UIViewController
 }
 // MARK: Presenter -
 protocol ChatPresenterProtocol: class {

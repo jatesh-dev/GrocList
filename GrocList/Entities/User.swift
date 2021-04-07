@@ -18,9 +18,9 @@ class User: Codable {
 		self.userID = userID
 	}
 	
-    init(name: String?, email: String?) {
+    init(name: String?, userID: String?) {
 		self.name = name
-		self.email = email
+		self.userID = userID
 	}
 	
     init(data: [String: Any]?) {

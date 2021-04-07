@@ -26,6 +26,7 @@ class AddFriendCell: UITableViewCell {
         super.awakeFromNib()
         imageViewProfilePicture.layer.cornerRadius = imageViewProfilePicture.frame.height/2
         imageViewProfilePicture.layer.borderWidth = 0.1
+        imageViewProfilePicture.image = nil
     }
     
     func configure (user: User) {

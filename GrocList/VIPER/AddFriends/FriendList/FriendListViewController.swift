@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class FriendListViewController: UIViewController {
 
@@ -48,10 +49,11 @@ extension FriendListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendListCell", for: indexPath) as? FriendListCell else { return UITableViewCell() }
+        cell.imageViewProfilePicture.image = nil
         GrocDbManager.shared.getProfilePicture(userID: friends[indexPath.row].userID ?? "") {(status) in
             switch status {
             case .success(let url):
-                cell.imageViewProfilePicture.sd_setImage(with: url)
+                cell.imageViewProfilePicture.kf.setImage(with: url)
             case .failure(let error):
                 print("Storage Error: ", error)
             }
@@ -73,7 +75,7 @@ extension FriendListViewController: UITableViewDelegate, UITableViewDataSource {
                 print("Error Occured: ", error)
             }
             DispatchQueue.main.async {
-                let grocViewController = GrocViewRouter.createModule(grockKey: self.grocKey)
+                let grocViewController = GrocViewRouter.createModule(grockKey: self.grocKey, secondUser: self.friends[indexPath.row])
                 let nav = UINavigationController()
                 nav.viewControllers = [grocViewController]
                 self.navigationController?.pushViewController(grocViewController, animated: true)

@@ -48,10 +48,11 @@ extension FriendRequestsViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "requestCell") as? RequestCell else { return UITableViewCell() }
+        cell.imageViewProfilePicture.image = nil
         GrocDbManager.shared.getProfilePicture(userID: friendRequests[indexPath.row].userID ?? "") {(status) in
             switch status {
             case .success(let url):
-                cell.imageViewProfilePicture.sd_setImage(with: url)
+                cell.imageViewProfilePicture.kf.setImage(with: url)
             case .failure(let error):
                 print("Storage Error: ", error)
             }

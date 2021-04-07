@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainViewProtocol {
     func checkFriends(userID: [String]) {
@@ -44,11 +45,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? MainUserCell else { return UITableViewCell() }
+        cell.imageViewProfilePicture.image = nil
         cell.labelName.text = friendList[indexPath.row].name
         GrocDbManager.shared.getProfilePicture(userID: friendList[indexPath.row].userID ?? "") {(status) in
             switch status {
             case .success(let url):
-                cell.imageViewProfilePicture.sd_setImage(with: url)
+                cell.imageViewProfilePicture.kf.indicatorType = .activity
+                cell.imageViewProfilePicture.kf.setImage(with: url)
             case .failure(let error):
                 print("Storage Error: ", error)
             }
@@ -87,7 +90,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVi
                 print("Error Occured: ", error)
             }
             DispatchQueue.main.async {
-                let grocViewController = GrocViewRouter.createModule(grockKey: self.key)
+                let grocViewController = GrocViewRouter.createModule(grockKey: self.key, secondUser: self.friendList[indexPath.row])
                 let nav = UINavigationController()
                 nav.viewControllers = [grocViewController]
                 self.navigationController?.pushViewController(grocViewController, animated: true)

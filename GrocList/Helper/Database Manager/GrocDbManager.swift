@@ -278,41 +278,20 @@ class GrocDbManager {
         guard let current = currentUserID, let second = secondUser else {
             return
         }
-        self.isFriend = false
-        self.dbReference.child("users").child(current).child("friends").getData { (_, currentUserSnapshot) in
-            self.dbReference.child("users").child(second).child("friends").getData { (_, secondUserSnapshot) in
-                if let currentUserSnap = currentUserSnapshot.children.allObjects as? [DataSnapshot] {
-                    if let secondUserSnap = secondUserSnapshot.children.allObjects as? [DataSnapshot] {
-                        for currentUser in currentUserSnap {
-                            for second in secondUserSnap {
-                                let currentuser = currentUser.key
-                                let seconduser = second.key
-                                if currentuser == seconduser {
-                                    completion(.success(true))
-                                    self.isFriend = true
-                                }
-                            }
-                        }
-                    }
-                }
-                if self.isFriend == false {
-                    self.friendCount = 0
-                    self.dbReference.child("users").child(current).child("friends").getData {(_, snapshot) in
-                        self.friendCount += snapshot.children.allObjects.count
-                        let friend = [second: "1"]
-                        self.dbReference.child("users").child(current).child("friends").updateChildValues(friend as [String: Any])
-                        self.friendCount = 0
-                    
-                        // Second User ID
-                        self.dbReference.child("users").child(second).child("grocRoom").getData {(_, snapshot) in
-                            self.friendCount += snapshot.children.allObjects.count
-                            let friend = [current: "0"]
-                            self.dbReference.child("users").child(second).child("friends").updateChildValues(friend as [String: Any]) { _, _ in
-                                DispatchQueue.main.async {
-                                    completion(.success(true))
-                                }
-                            }
-                        }
+        self.friendCount = 0
+        self.dbReference.child("users").child(current).child("friends").getData {(_, snapshot) in
+            self.friendCount += snapshot.children.allObjects.count
+            let friend = [second: "1"]
+            self.dbReference.child("users").child(current).child("friends").updateChildValues(friend as [String: Any])
+            self.friendCount = 0
+            
+            // Second User ID
+            self.dbReference.child("users").child(second).child("grocRoom").getData {(_, snapshot) in
+                self.friendCount += snapshot.children.allObjects.count
+                let friend = [current: "0"]
+                self.dbReference.child("users").child(second).child("friends").updateChildValues(friend as [String: Any]) { _, _ in
+                    DispatchQueue.main.async {
+                        completion(.success(true))
                     }
                 }
             }
