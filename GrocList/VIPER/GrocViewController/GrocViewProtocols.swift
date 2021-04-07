@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GrocViewWireframeProtocol: class {
-    static func createModule (grockKey: String?) -> GrocViewController
+    static func createModule (grockKey: String?, secondUser: User?) -> GrocViewController
 }
 
 protocol GrocViewPresenterProtocol: class {

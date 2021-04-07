@@ -19,8 +19,7 @@ protocol AddFriendsPresenterProtocol: class {
 
     var interactor: AddFriendsInteractorInputProtocol? { get set }
 
-    func getAllUsersExceptFriends()
-    func getFriendList(userID: String)
+    func getAllUsersExceptFriends(roomID: String)
 }
 
 // MARK: Interactor -
@@ -32,8 +31,7 @@ protocol AddFriendsInteractorOutputProtocol: class {
 protocol AddFriendsInteractorInputProtocol: class {
 
     var presenter: AddFriendsInteractorOutputProtocol? { get set }
-    func getAllUsersFromDB()
-    func getFriends(roomID: String)
+    func getAllUsersFromDB(roomID: String)
     /* Presenter -> Interactor */
 }
 

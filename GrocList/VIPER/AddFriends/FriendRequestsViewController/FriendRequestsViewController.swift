@@ -31,8 +31,7 @@ class FriendRequestsViewController: UIViewController {
         guard let userID = Auth.auth().currentUser?.uid else { return }
         self.currentUserID = userID
         
-        presenter?.getFriendRequests(roomID: currentUserID)
-        presenter?.getAllFriendRequests()
+        presenter?.getAllFriendRequests(roomID: currentUserID)
     }
     
     func register() {
@@ -51,7 +50,7 @@ extension FriendRequestsViewController: UITableViewDelegate, UITableViewDataSour
         GrocDbManager.shared.getProfilePicture(userID: friendRequests[indexPath.row].userID ?? "") {(status) in
             switch status {
             case .success(let url):
-                cell.imageViewProfilePicture.sd_setImage(with: url)
+                cell.imageViewProfilePicture.kf.setImage(with: url, placeholder: UIImage(named: "user"))
             case .failure(let error):
                 print("Storage Error: ", error)
             }

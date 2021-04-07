@@ -16,22 +16,18 @@ protocol MainPresenterProtocol: class {
     var view: MainViewProtocol? { get set }
     var interactor: MainInteractorInputProtocol? { get set }
     var router: MainWireframeProtocol? { get set }
-    func showUsers()
-    func friendList(currentUserID: String)
+    func showUsers(currentUserID: String)
 }
 
 protocol MainInteractorInputProtocol: class {
     var presenter: MainInteractorOutputProtocol? { get set }
-    func getUsers()
-    func getFriends(roomID: String)
+    func getUsers(roomID: String)
 }
 
 protocol MainInteractorOutputProtocol: class {
-    func fetchedUsers(users: [User])
-    func friendsIDs(userID: [String])
+    func fetchedFriends(users: [User])
 }
 
 protocol MainViewProtocol: class {
     func updateView(users: [User])
-    func checkFriends(userID: [String])
 }

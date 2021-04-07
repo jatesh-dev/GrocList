@@ -30,16 +30,12 @@ final class FriendRequestsPresenter {
 }
 
 extension FriendRequestsPresenter: FriendRequestsPresenterProtocol {
+    func getAllFriendRequests(roomID: String) {
+        interactor?.getAllRequestsFromDB(roomID: roomID)
+    }
+    
     func changeFriendRequestStatus(accept: Bool, userID: String, roomKey: String) {
         interactor?.changeFriendRequestStatusIntoDB(accept: accept, userID: userID, roomKey: roomKey)
-    }
-    
-    func getFriendRequests(roomID: String) {
-        interactor?.getFriendRequests(roomID: roomID)
-    }
-    
-    func getAllFriendRequests() {
-        interactor?.getAllRequestsFromDB()
     }
     
     func viewDidLoad() {

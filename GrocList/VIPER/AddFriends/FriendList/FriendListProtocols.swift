@@ -30,7 +30,7 @@ protocol FriendListInteractorOutputProtocol: class {
 protocol FriendListInteractorInputProtocol: class {
 
     var presenter: FriendListInteractorOutputProtocol? { get set }
-    func getFriends(userID: String)
+    func getUsers(roomID: String)
     /* Presenter -> Interactor */
 }
 

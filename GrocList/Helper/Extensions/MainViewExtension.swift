@@ -7,20 +7,13 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainViewProtocol {
-    func checkFriends(userID: [String]) {
-        self.friends.append(contentsOf: userID)
-    }
     
     func updateView(users: [User]) {
-        self.friendList = [User]()
-        for user in users {
-            if friends.contains(user.userID!) {
-                friendList.append(user)
-            }
-        }
-        
+        self.friendList.removeAll()
+        friendList.append(contentsOf: users)
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.hideActivityIndicator()
@@ -44,11 +37,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? MainUserCell else { return UITableViewCell() }
+        cell.imageViewProfilePicture.image = nil
         cell.labelName.text = friendList[indexPath.row].name
         GrocDbManager.shared.getProfilePicture(userID: friendList[indexPath.row].userID ?? "") {(status) in
             switch status {
             case .success(let url):
-                cell.imageViewProfilePicture.sd_setImage(with: url)
+                cell.imageViewProfilePicture.kf.indicatorType = .activity
+                cell.imageViewProfilePicture.kf.setImage(with: url, placeholder: UIImage(named: "user"))
             case .failure(let error):
                 print("Storage Error: ", error)
             }
@@ -87,7 +82,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, MainVi
                 print("Error Occured: ", error)
             }
             DispatchQueue.main.async {
-                let grocViewController = GrocViewRouter.createModule(grockKey: self.key)
+                let grocViewController = GrocViewRouter.createModule(grockKey: self.key, secondUser: self.friendList[indexPath.row])
                 let nav = UINavigationController()
                 nav.viewControllers = [grocViewController]
                 self.navigationController?.pushViewController(grocViewController, animated: true)

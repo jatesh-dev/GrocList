@@ -48,8 +48,7 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard let currentUserID = self.currentUserID else { return }
-        presentor?.friendList(currentUserID: currentUserID)
-        presentor?.showUsers()
+        presentor?.showUsers(currentUserID: currentUserID)
     }
     
     @objc private func didTapMenu () {

@@ -34,7 +34,7 @@ extension SignUpViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
             imageUrl = url
-            self.buttonSelectImage.sd_setImage(with: url, for: .normal)
+            self.buttonSelectImage.kf.setImage(with: url, for: .normal)
             print(url.deletingPathExtension().lastPathComponent)
         }
         imagePickerController.dismiss(animated: true, completion: nil)

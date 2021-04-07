@@ -33,8 +33,6 @@ class FriendsTabBarController: UITabBarController {
     }
     @objc private func backScreen() {
         let mainViewController = MainRouter.createModule()
-        let nav = UINavigationController()
-        nav.viewControllers = [mainViewController]
         navigationController?.pushViewController(mainViewController, animated: true)
     }
 }

@@ -14,19 +14,12 @@ class MainPresenter: MainPresenterProtocol {
     var interactor: MainInteractorInputProtocol?
     var router: MainWireframeProtocol?
     
-    func showUsers() {
-        interactor?.getUsers()
-    }
-    func friendList(currentUserID: String) {
-        interactor?.getFriends(roomID: currentUserID)
+    func showUsers(currentUserID: String) {
+        interactor?.getUsers(roomID: currentUserID)
     }
 }
 extension MainPresenter: MainInteractorOutputProtocol {
-    func friendsIDs(userID: [String]) {
-        view?.checkFriends(userID: userID)
-    }
-    
-    func fetchedUsers(users: [User]) {
+    func fetchedFriends(users: [User]) {
         view?.updateView(users: users)
     }
 }

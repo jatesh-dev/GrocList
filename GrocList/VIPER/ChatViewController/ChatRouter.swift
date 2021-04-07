@@ -18,7 +18,7 @@ final class ChatRouter {
         print("deinit ChatRouter")
     }
 
-    static func createModule(chatKey: String) -> UIViewController {
+    static func createModule(chatKey: String, user: User?) -> UIViewController {
 
         // Change to get view from storyboard if not using progammatic UI
         let view = chatViewStoryboard.instantiateViewController(identifier: "ChatViewController") as? ChatViewController
@@ -31,6 +31,7 @@ final class ChatRouter {
         interactor.presenter = presenter
         router.viewController = view
         view?.chatroomKey = chatKey
+        view?.user = user
         return view!
     }
     

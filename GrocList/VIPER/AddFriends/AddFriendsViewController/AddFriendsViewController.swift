@@ -8,13 +8,15 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class AddFriendsViewController: UIViewController {
 
 	var presenter: AddFriendsPresenterProtocol?
     var suggestions = [User]()
     let spinner = UIActivityIndicatorView(style: .large)
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var labelNoSuggesions: UILabel!
     deinit {
         print("deinit AddFriendsViewController")
     }
@@ -24,9 +26,8 @@ class AddFriendsViewController: UIViewController {
         super.viewDidLoad()
         guard let userID: String = Auth.auth().currentUser?.uid else { return }
         self.currentUserID = userID
-        presenter?.getFriendList(userID: userID)
-        presenter?.getAllUsersExceptFriends()
-        
+        presenter?.getAllUsersExceptFriends(roomID: userID)
+        labelNoSuggesions.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         register()
@@ -45,10 +46,12 @@ extension AddFriendsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "addFriendCell", for: indexPath) as? AddFriendCell else { return UITableViewCell() }
+        cell.imageViewProfilePicture.image = nil
         GrocDbManager.shared.getProfilePicture(userID: suggestions[indexPath.row].userID ?? "") {(status) in
             switch status {
             case .success(let url):
-                cell.imageViewProfilePicture.sd_setImage(with: url)
+                cell.imageViewProfilePicture.kf.indicatorType = .activity
+                cell.imageViewProfilePicture.kf.setImage(with: url, placeholder: UIImage(named: "user"))
             case .failure(let error):
                 print("Storage Error: ", error)
             }
@@ -73,6 +76,11 @@ extension AddFriendsViewController: AddFriendsViewProtocol, AddFriendCellDelegat
         self.suggestions.append(contentsOf: users)
         DispatchQueue.main.async {
             self.hideLoader()
+            if self.suggestions.count > 0 {
+                self.labelNoSuggesions.isHidden = true
+            } else {
+                self.labelNoSuggesions.isHidden = false
+            }
             self.tableView.reloadData()
         }
     }
@@ -92,8 +100,7 @@ extension AddFriendsViewController: AddFriendsViewProtocol, AddFriendCellDelegat
             switch result {
             case .success:
                 DispatchQueue.main.async {
-                    self.presenter?.getFriendList(userID: self.currentUserID)
-                    self.presenter?.getAllUsersExceptFriends()
+                    self.presenter?.getAllUsersExceptFriends(roomID: self.currentUserID)
                 }
             case .failure(let error):
                 print("Error Occured: ", error)

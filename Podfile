@@ -14,5 +14,5 @@ target 'GrocList' do
   pod 'Firebase/Storage'
   pod 'FirebaseUI/Storage'
   pod 'SwiftLint'  
-
+  pod 'Kingfisher'
 end

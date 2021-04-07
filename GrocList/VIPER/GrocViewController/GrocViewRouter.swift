@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class GrocViewRouter: GrocViewWireframeProtocol {
-    static func createModule(grockKey: String?) -> GrocViewController {
+    static func createModule(grockKey: String?, secondUser: User?) -> GrocViewController {
         let view = grocStoryboard.instantiateViewController(identifier: "GrocViewController") as? GrocViewController
         
         let presenter: GrocViewPresenterProtocol & GrocViewInteractorOutputProtocol = GrocViewPresenter()
@@ -23,7 +23,7 @@ class GrocViewRouter: GrocViewWireframeProtocol {
         presenter.router = router
         
         view?.grocKey = grockKey
-        
+        view?.secondUser = secondUser
         return view!
     }
     static var grocStoryboard: UIStoryboard { return UIStoryboard(name: "Main", bundle: Bundle.main) }

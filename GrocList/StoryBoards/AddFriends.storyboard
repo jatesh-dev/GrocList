@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,6 +21,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Suggestion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-4Y-KIC">
+                                <rect key="frame" x="0.0" y="441" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zWk-Za-Lya"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -29,11 +34,15 @@
                             <constraint firstItem="zWk-Za-Lya" firstAttribute="trailing" secondItem="GKr-lX-Mix" secondAttribute="trailing" id="2hX-qG-DzJ"/>
                             <constraint firstItem="zWk-Za-Lya" firstAttribute="bottom" secondItem="GKr-lX-Mix" secondAttribute="bottom" id="9nE-5u-9kl"/>
                             <constraint firstItem="GKr-lX-Mix" firstAttribute="leading" secondItem="zWk-Za-Lya" secondAttribute="leading" id="Mpc-Ru-XL8"/>
+                            <constraint firstItem="9i4-4Y-KIC" firstAttribute="centerY" secondItem="zWk-Za-Lya" secondAttribute="centerY" id="fRk-lr-pLD"/>
                             <constraint firstItem="GKr-lX-Mix" firstAttribute="top" secondItem="zWk-Za-Lya" secondAttribute="top" id="hap-Qz-hku"/>
+                            <constraint firstItem="zWk-Za-Lya" firstAttribute="trailing" secondItem="9i4-4Y-KIC" secondAttribute="trailing" id="rES-hk-ElP"/>
+                            <constraint firstItem="9i4-4Y-KIC" firstAttribute="leading" secondItem="zWk-Za-Lya" secondAttribute="leading" id="wwf-Vf-Wcl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Suggestions" image="person.3" catalog="system" id="kZD-6f-vTs"/>
                     <connections>
+                        <outlet property="labelNoSuggesions" destination="9i4-4Y-KIC" id="Ofe-xt-EzI"/>
                         <outlet property="tableView" destination="GKr-lX-Mix" id="UAF-Cu-0C6"/>
                     </connections>
                 </viewController>
