@@ -7,61 +7,38 @@
 
 import UIKit
 
-extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
-	
-	fileprivate func eventDBChildAdded() {
-		guard let chatKey = self.chatroomKey else {
-			return
-		}
-		DbManager.shared.observer(event: .childAdded, chatKey: chatKey) { (data) in
-			switch data {
-			case .success(let data):
-				self.msg = [Messages]()
-				data.forEach({ (data) in
-					self.msg.append(data)
-				})
-			case .failure(let error):
-				print("Error: ", error)
-			}
-			DispatchQueue.main.async {
-				self.tableView.reloadData()
-				if !self.msg.isEmpty {
-					self.tableView.scrollToRow(at: IndexPath(row: (self.msg.count - 1), section: 0), at: .bottom, animated: true)
-				}
-			}
-		}
-	}
-	
-	fileprivate func eventDBChildChanged() {
-		guard let chatKey = self.chatroomKey else { return }
-		DbManager.shared.observer(event: .childChanged, chatKey: chatKey) { (data) in
-			switch data {
-			case .success(let data):
-				self.msg = [Messages]()
-				data.forEach({ (data) in
-					self.msg.append(data)
-				})
-			case .failure(let error):
-				print("Error: ", error)
-			}
-			DispatchQueue.main.async {
-				self.tableView.reloadData()
-				if !self.msg.isEmpty {
-					self.tableView.scrollToRow(at: IndexPath(row: (self.msg.count - 1), section: 0), at: .bottom, animated: true)
-				}
-			}
-		}
-	}
+extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, ChatViewProtocol {
+    func showLoader() {
+        activityView = UIActivityIndicatorView(style: .large)
+        activityView?.center = self.view.center
+        self.tableView.addSubview(activityView!)
+        activityView?.startAnimating()
+    }
+    
+    func hideLoader() {
+        if activityView != nil {
+            activityView?.stopAnimating()
+        }
+    }
+    
+    func displayChat(chat: [Messages]) {
+        self.msg = [Messages]()
+        self.msg.append(contentsOf: chat)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            if !self.msg.isEmpty {
+                self.tableView.scrollToRow(at: IndexPath(row: (self.msg.count - 1), section: 0), at: .bottom, animated: true)
+            }
+        }
+    }
 	
 	func loadMessages() {
-		eventDBChildChanged()
-		eventDBChildAdded()
 		if !self.msg.isEmpty {
 			self.tableView.scrollToRow(at: IndexPath(row: (self.msg.count - 1), section: 0), at: .bottom, animated: true)
 			tableView.reloadData()
 		}
 		tableView.reloadData()
-		hideActivityIndicator()
+        hideLoader()
 	}
 	
 	func registerCellForChat() {
@@ -69,20 +46,6 @@ extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableV
 		tableView.register(nibCell, forCellReuseIdentifier: "receivedMessage")
 		let nibCellSent = UINib(nibName: "ViewSentCell", bundle: nil)
 		tableView.register(nibCellSent, forCellReuseIdentifier: "sentMessage")
-	}
-	
-	// ActivityIndicator
-	func showActivityIndicator() {
-		activityView = UIActivityIndicatorView(style: .large)
-		activityView?.center = self.view.center
-		self.tableView.addSubview(activityView!)
-		activityView?.startAnimating()
-	}
-	
-	func hideActivityIndicator() {
-		if activityView != nil {
-			activityView?.stopAnimating()
-		}
 	}
 	
 	// setTimeandDate
@@ -141,13 +104,15 @@ extension ChatViewController: UITextFieldDelegate, UITableViewDelegate, UITableV
 	
 	// NavBar back Action
 	@objc func leftHandAction() {
+        self.view.endEditing(true)
+        self.dismissKeyboard()
 		self.navigationController?.popViewController(animated: true)
 	}
 	
 	func attributedNavigation() {
 		navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.09019607843, green: 0.3568627451, blue: 0.6196078431, alpha: 1)
 		navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor .white]
-		navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "backButtonIcon"), style: .plain, target: self, action: #selector(leftHandAction))
+		navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(leftHandAction))
 		navTitleAndImage(user?.name ?? "")
 	}
 	

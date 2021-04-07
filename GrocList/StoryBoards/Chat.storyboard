@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChatViewController-->
+        <scene sceneID="Rxe-EI-wpF">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" title="ChatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v7J-PL-JyS" customClass="ChatViewController" customModule="GrocList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fba-XH-a0r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ada-su-bzc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJE-3D-61i">
+                                <rect key="frame" x="0.0" y="809" width="414" height="1"/>
+                                <color key="backgroundColor" red="0.078362851891282295" green="0.27610558770996507" blue="0.37624934667359489" alpha="0.3177223458195364" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bg-5Q-Oty">
+                                <rect key="frame" x="0.0" y="808" width="414" height="54"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l55-U9-Vbi">
+                                        <rect key="frame" x="10" y="10" width="394" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type message here ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-cJ-uxP">
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umO-Ay-S93">
+                                                <rect key="frame" x="348" y="0.0" width="46" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="46" id="dJn-yJ-Mic"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                                <state key="normal" title="Send" image="telegram">
+                                                    <color key="titleShadowColor" red="0.1764705882" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonActionSendMessage:" destination="v7J-PL-JyS" eventType="touchUpInside" id="YdH-jV-dJX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="umO-Ay-S93" firstAttribute="leading" secondItem="gpH-cJ-uxP" secondAttribute="trailing" constant="10" id="oIk-aI-OO0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="l55-U9-Vbi" firstAttribute="top" secondItem="9bg-5Q-Oty" secondAttribute="top" constant="10" id="3EB-Rl-kGa"/>
+                                    <constraint firstAttribute="bottom" secondItem="l55-U9-Vbi" secondAttribute="bottom" constant="10" id="ARu-Vl-jEa"/>
+                                    <constraint firstItem="l55-U9-Vbi" firstAttribute="leading" secondItem="9bg-5Q-Oty" secondAttribute="leading" constant="10" id="FGL-Lc-7cI"/>
+                                    <constraint firstAttribute="trailing" secondItem="l55-U9-Vbi" secondAttribute="trailing" constant="10" id="lhM-2R-iDB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="46h-bw-qKX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EJE-3D-61i" firstAttribute="top" secondItem="ada-su-bzc" secondAttribute="bottom" constant="-1" id="13J-Os-hUk"/>
+                            <constraint firstItem="46h-bw-qKX" firstAttribute="trailing" secondItem="EJE-3D-61i" secondAttribute="trailing" id="3OY-td-SBS"/>
+                            <constraint firstItem="9bg-5Q-Oty" firstAttribute="leading" secondItem="46h-bw-qKX" secondAttribute="leading" id="Ayd-4c-38F"/>
+                            <constraint firstItem="ada-su-bzc" firstAttribute="top" secondItem="46h-bw-qKX" secondAttribute="top" id="Fte-zJ-R0W"/>
+                            <constraint firstItem="46h-bw-qKX" firstAttribute="bottom" secondItem="9bg-5Q-Oty" secondAttribute="bottom" id="J29-LY-2uF"/>
+                            <constraint firstItem="EJE-3D-61i" firstAttribute="top" secondItem="9bg-5Q-Oty" secondAttribute="top" constant="1" id="R2S-Ug-jTx"/>
+                            <constraint firstItem="46h-bw-qKX" firstAttribute="trailing" secondItem="ada-su-bzc" secondAttribute="trailing" id="Z5N-SL-isw"/>
+                            <constraint firstItem="46h-bw-qKX" firstAttribute="trailing" secondItem="9bg-5Q-Oty" secondAttribute="trailing" id="a22-Lc-TCe"/>
+                            <constraint firstItem="EJE-3D-61i" firstAttribute="leading" secondItem="46h-bw-qKX" secondAttribute="leading" id="aYc-OT-I5F"/>
+                            <constraint firstItem="9bg-5Q-Oty" firstAttribute="top" secondItem="EJE-3D-61i" secondAttribute="bottom" constant="-2" id="z8F-jF-KWf"/>
+                            <constraint firstItem="ada-su-bzc" firstAttribute="leading" secondItem="46h-bw-qKX" secondAttribute="leading" id="zho-H4-gGL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jt5-hh-Pnz"/>
+                    <connections>
+                        <outlet property="fieldTypeMessage" destination="gpH-cJ-uxP" id="QEW-1g-aah"/>
+                        <outlet property="tableView" destination="ada-su-bzc" id="khs-kS-tNq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAR-KZ-xpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3224.6376811594205" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="telegram" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
